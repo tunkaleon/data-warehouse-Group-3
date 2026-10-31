@@ -1,0 +1,22 @@
+# =====================================================================
+# Files that must NOT be uploaded to GitHub
+# =====================================================================
+
+# never upload the backup encryption key or the backups
+07_Security_Documentation/backup_scripts/backup.key
+07_Security_Documentation/backup_scripts/backups/
+
+# Python / temporary files
+__pycache__/
+*.pyc
+03_Database_Files/library_dw_before_restore_*.db
+04_ETL_Files/output/etl_failure.log
+
+# Office "lock" files (created while a Word/Excel/PowerPoint file is open)
+~$*
+
+# old Power BI file (replaced by 06_Dashboards/LibraryDW_3_Dashboards.pbix)
+06_Dashboards/LibraryDW_Dashboards.pbix
+
+# private working copies of the team (duplicates of the real folders)
+Member Tasks/

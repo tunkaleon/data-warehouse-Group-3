@@ -1,0 +1,17 @@
+digraph A {
+ graph [rankdir=LR, fontname="Helvetica", label="Library Data Warehouse - 4-tier architecture (Kimball, bottom-up) on SQLite", labelloc=t, fontsize=20, nodesep=0.35, ranksep=0.6, compound=true, pad=0.3];
+ node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=11, fillcolor="#ffffff", color="#7a7a7a"];
+ edge [color="#444444"];
+ subgraph cluster_1 {label="TIER 1  Data sources"; style="rounded,filled"; fillcolor="#eef3f8"; color="#c9d6e3"; fontname="Helvetica-Bold";
+   s1 [label="Book Lending System\nbook_transactions.csv\n(MySQL export)"]; s2 [label="Digital Resources\ndigital_usage.xlsx\n(3 sheets)"]; s3 [label="Room Booking System\nroom_bookings.csv"]; s4 [label="Reference data\nstudent_master.csv\nbook_catalog.csv"]; }
+ subgraph cluster_2 {label="TIER 2  ETL + staging   (etl_script.py, pandas)"; style="rounded,filled"; fillcolor="#fdf3e3"; color="#ecd9b5"; fontname="Helvetica-Bold";
+   ext [label="EXTRACT\nread every value\nas text"]; stg [label="Staging tables\nstg_*  (TEXT columns)"]; trn [label="TRANSFORM\nstandardise - dedupe -\nISO dates - NULLs - validate"]; map [label="Cleansing rules\nmap_department\nmap_time_slot"]; log [label="etl_error_log\netl_batch_log", fillcolor="#fbe0dc"]; }
+ subgraph cluster_3 {label="TIER 3  Data warehouse   library_dw.db (SQLite)"; style="rounded,filled"; fillcolor="#e8f4ea"; color="#bfdcc4"; fontname="Helvetica-Bold";
+   load [label="LOAD\nsurrogate keys, 12 checks,\n1 transaction"]; dw [label="Galaxy schema\n3 fact + 9 dimension tables\nv_usage_cube (OLAP view)"]; }
+ subgraph cluster_4 {label="TIER 4  Presentation & access"; style="rounded,filled"; fillcolor="#f1ecf8"; color="#d6cbe7"; fontname="Helvetica-Bold";
+   gate [label="secure_access.py\nlogin - RBAC - masking -\nrow-level security - audit"]; q [label="business_queries.sql\n31 queries + OLAP"]; pbi [label="Power BI\n3 dashboards\n(ODBC or CSV)"]; }
+ s1->ext; s2->ext; s3->ext; s4->ext; ext->stg->trn->load->dw; map->trn [style=dashed]; trn->log [style=dashed];
+ dw->gate; gate->q; dw->pbi [label="masked data", fontsize=9, fontcolor="#52514e"];
+ sec [label="Backups: weekly FULL (encrypted) + nightly DIFFERENTIAL + 4-hourly INCREMENTAL\nRestore test: backup_restore.py verify", shape=note, fillcolor="#fff8c6"];
+ dw->sec [style=dotted, arrowhead=none];
+}

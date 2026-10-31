@@ -1,0 +1,82 @@
+====================================================================================================
+ ETL ERROR LOG (SAMPLE) - University Library DW - batch 1 - 2026-10-27 18:46
+ Full log: output/etl_error_log.csv and table library_staging.etl_error_log (527 entries)
+====================================================================================================
+
+SUMMARY BY SOURCE, ERROR TYPE AND ACTION
+------------------------------------------------------------
+ stg_book_transactions    DUPLICATE_EXACT      REJECTED      44
+ stg_book_transactions    DUPLICATE_LOGICAL    REJECTED      22
+ stg_book_transactions    INVALID_DATE         REJECTED       4
+ stg_book_transactions    INVALID_RANGE        REJECTED       3
+ stg_book_transactions    MISSING_VALUE        CORRECTED     76
+ stg_book_transactions    UNKNOWN_REFERENCE    DEFAULTED      4
+ stg_digital_usage        DUPLICATE_EXACT      REJECTED      60
+ stg_digital_usage        INVALID_NUMBER       REJECTED      18
+ stg_digital_usage        MISSING_VALUE        DEFAULTED     75
+ stg_digital_usage        SUBTOTAL_ROW         REJECTED      12
+ stg_digital_usage        TEXT_NUMBER          CORRECTED     44
+ stg_room_bookings        DUPLICATE_EXACT      REJECTED     112
+ stg_room_bookings        DUPLICATE_NEAR       REJECTED      43
+ stg_room_bookings        INVALID_DATE         REJECTED       3
+ stg_room_bookings        INVALID_NUMBER       REJECTED       4
+ stg_room_bookings        UNKNOWN_REFERENCE    DEFAULTED      3
+
+HOW EACH ACTION IS HANDLED
+------------------------------------------------------------
+ REJECTED  : row is NOT loaded into the warehouse (kept in staging for review)
+ CORRECTED : value fixed automatically (e.g. department filled from master data)
+ DEFAULTED : value replaced with 'Unknown' / NULL so the row can still be used
+
+SAMPLE ENTRIES (first 5 of each error type)
+----------------------------------------------------------------------------------------------------
+    ID | source                 |   row | column           | bad value                    | error type         | action    | message
+----------------------------------------------------------------------------------------------------
+     1 | stg_book_transactions  |   171 | TransactionID    | 1169                         | DUPLICATE_EXACT    | REJECTED  | Identical row already exists (copied twice by the source system)
+     2 | stg_book_transactions  |   223 | TransactionID    | 1220                         | DUPLICATE_EXACT    | REJECTED  | Identical row already exists (copied twice by the source system)
+     3 | stg_book_transactions  |   329 | TransactionID    | 1325                         | DUPLICATE_EXACT    | REJECTED  | Identical row already exists (copied twice by the source system)
+     4 | stg_book_transactions  |   352 | TransactionID    | 1347                         | DUPLICATE_EXACT    | REJECTED  | Identical row already exists (copied twice by the source system)
+     5 | stg_book_transactions  |   410 | TransactionID    | 1404                         | DUPLICATE_EXACT    | REJECTED  | Identical row already exists (copied twice by the source system)
+   132 | stg_book_transactions  |  2258 | TransactionID    | 3213                         | DUPLICATE_LOGICAL  | REJECTED  | Same student, book and checkout date as an earlier transaction
+   133 | stg_book_transactions  |  2259 | TransactionID    | 3214                         | DUPLICATE_LOGICAL  | REJECTED  | Same student, book and checkout date as an earlier transaction
+   134 | stg_book_transactions  |  2260 | TransactionID    | 3215                         | DUPLICATE_LOGICAL  | REJECTED  | Same student, book and checkout date as an earlier transaction
+   135 | stg_book_transactions  |  2261 | TransactionID    | 3216                         | DUPLICATE_LOGICAL  | REJECTED  | Same student, book and checkout date as an earlier transaction
+   136 | stg_book_transactions  |  2262 | TransactionID    | 3217                         | DUPLICATE_LOGICAL  | REJECTED  | Same student, book and checkout date as an earlier transaction
+   485 | stg_room_bookings      |  2845 | BookingID        | 7843                         | DUPLICATE_NEAR     | REJECTED  | Same room R102, date and time slot as an earlier booking
+   486 | stg_room_bookings      |  2264 | BookingID        | 7844                         | DUPLICATE_NEAR     | REJECTED  | Same room R203, date and time slot as an earlier booking
+   487 | stg_room_bookings      |   355 | BookingID        | 7845                         | DUPLICATE_NEAR     | REJECTED  | Same room R301, date and time slot as an earlier booking
+   488 | stg_room_bookings      |  1030 | BookingID        | 7846                         | DUPLICATE_NEAR     | REJECTED  | Same room R102, date and time slot as an earlier booking
+   489 | stg_room_bookings      |   283 | BookingID        | 7847                         | DUPLICATE_NEAR     | REJECTED  | Same room R102, date and time slot as an earlier booking
+    73 | stg_book_transactions  |   877 | CheckoutDate     | 2023-00-12                   | INVALID_DATE       | REJECTED  | Checkout date is not a valid date in 2023-2025
+    98 | stg_book_transactions  |  1386 | CheckoutDate     | N/A                          | INVALID_DATE       | REJECTED  | Checkout date is not a valid date in 2023-2025
+   100 | stg_book_transactions  |  1470 | CheckoutDate     | N/A                          | INVALID_DATE       | REJECTED  | Checkout date is not a valid date in 2023-2025
+   103 | stg_book_transactions  |  1538 | CheckoutDate     | 2023-00-12                   | INVALID_DATE       | REJECTED  | Checkout date is not a valid date in 2023-2025
+   477 | stg_room_bookings      |  1602 | BookingDate      | 31-Feb-2024                  | INVALID_DATE       | REJECTED  | Booking date is not a valid date in 2023-2025
+   236 | stg_digital_usage      |   530 | DownloadCount    | two                          | INVALID_NUMBER     | REJECTED  | DownloadCount must be a whole number between 0 and 5000
+   259 | stg_digital_usage      |    30 | DownloadCount    | -3                           | INVALID_NUMBER     | REJECTED  | DownloadCount must be a whole number between 0 and 5000
+   271 | stg_digital_usage      |   369 | DownloadCount    | -3                           | INVALID_NUMBER     | REJECTED  | DownloadCount must be a whole number between 0 and 5000
+   272 | stg_digital_usage      |   405 | DownloadCount    | two                          | INVALID_NUMBER     | REJECTED  | DownloadCount must be a whole number between 0 and 5000
+   275 | stg_digital_usage      |   448 | DownloadCount    | -3                           | INVALID_NUMBER     | REJECTED  | DownloadCount must be a whole number between 0 and 5000
+    51 | stg_book_transactions  |   257 | ReturnDate       | Apr 02, 2023                 | INVALID_RANGE      | REJECTED  | Return date is before checkout date (2023-04-17)
+   124 | stg_book_transactions  |  2122 | ReturnDate       | 2025-10-22                   | INVALID_RANGE      | REJECTED  | Return date is before checkout date (2025-10-28)
+   126 | stg_book_transactions  |  2132 | ReturnDate       | 2025-10-27                   | INVALID_RANGE      | REJECTED  | Return date is before checkout date (2025-11-05)
+    45 | stg_book_transactions  |    13 | Department       |                              | MISSING_VALUE      | CORRECTED | Department filled from student master data -> SCI
+    46 | stg_book_transactions  |   117 | Department       |                              | MISSING_VALUE      | CORRECTED | Department filled from student master data -> BUS
+    47 | stg_book_transactions  |   142 | Department       |                              | MISSING_VALUE      | CORRECTED | Department filled from student master data -> MED
+    48 | stg_book_transactions  |   160 | Department       |                              | MISSING_VALUE      | CORRECTED | Department filled from student master data -> EDU
+    49 | stg_book_transactions  |   189 | Department       |                              | MISSING_VALUE      | CORRECTED | Department filled from student master data -> LAW
+   216 | stg_digital_usage      |   148 | ResourceTitle    | QUARTER 1 TOTAL = 1,131      | SUBTOTAL_ROW       | REJECTED  | Manual subtotal row, not a real download record
+   223 | stg_digital_usage      |   248 | ResourceTitle    | QUARTER 2 TOTAL = 1,576      | SUBTOTAL_ROW       | REJECTED  | Manual subtotal row, not a real download record
+   235 | stg_digital_usage      |   513 | ResourceTitle    | QUARTER 3 TOTAL = 696        | SUBTOTAL_ROW       | REJECTED  | Manual subtotal row, not a real download record
+   249 | stg_digital_usage      |   842 | ResourceTitle    | QUARTER 4 TOTAL = 1,585      | SUBTOTAL_ROW       | REJECTED  | Manual subtotal row, not a real download record
+   278 | stg_digital_usage      |   517 | ResourceTitle    | QUARTER 4 TOTAL = 1,451      | SUBTOTAL_ROW       | REJECTED  | Manual subtotal row, not a real download record
+   220 | stg_digital_usage      |   189 | DownloadCount    |  1                           | TEXT_NUMBER        | CORRECTED | Number stored as text (spaces/commas/decimals) -> 1
+   221 | stg_digital_usage      |   239 | DownloadCount    | 2.0                          | TEXT_NUMBER        | CORRECTED | Number stored as text (spaces/commas/decimals) -> 2
+   224 | stg_digital_usage      |   265 | DownloadCount    |  1                           | TEXT_NUMBER        | CORRECTED | Number stored as text (spaces/commas/decimals) -> 1
+   226 | stg_digital_usage      |   296 | DownloadCount    |  2                           | TEXT_NUMBER        | CORRECTED | Number stored as text (spaces/commas/decimals) -> 2
+   231 | stg_digital_usage      |   430 | DownloadCount    | 3.0                          | TEXT_NUMBER        | CORRECTED | Number stored as text (spaces/commas/decimals) -> 3
+    62 | stg_book_transactions  |   560 | BookISBN         | 978-1238724937               | UNKNOWN_REFERENCE  | DEFAULTED | ISBN not in the book catalogue -> Unknown Book
+    66 | stg_book_transactions  |   637 | BookISBN         | 978-7979007049               | UNKNOWN_REFERENCE  | DEFAULTED | ISBN not in the book catalogue -> Unknown Book
+   115 | stg_book_transactions  |  1864 | BookISBN         | 978-5594849679               | UNKNOWN_REFERENCE  | DEFAULTED | ISBN not in the book catalogue -> Unknown Book
+   123 | stg_book_transactions  |  2119 | BookISBN         | 978-7774592542               | UNKNOWN_REFERENCE  | DEFAULTED | ISBN not in the book catalogue -> Unknown Book
+   475 | stg_room_bookings      |   746 | StudentID        | STU-2024-999                 | UNKNOWN_REFERENCE  | DEFAULTED | Student not in master data -> Unknown student

@@ -1,0 +1,10 @@
+department_key,department_code,department_name,faculty_name
+1,UNK,Unknown,Unknown
+2,CS,Computer Science,Faculty of Computing & IT
+3,ENG,Engineering,Faculty of Engineering & Technology
+4,BUS,Business,Faculty of Business & Economics
+5,MED,Health Sciences,Faculty of Medicine & Health Sciences
+6,EDU,Education,Faculty of Education
+7,LAW,Law,Faculty of Law
+8,ART,Arts & Humanities,Faculty of Arts & Social Sciences
+9,SCI,Natural Sciences,Faculty of Science

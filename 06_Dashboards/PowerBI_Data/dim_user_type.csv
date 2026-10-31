@@ -1,0 +1,6 @@
+user_type_key,user_type,user_group,student_level
+1,Unknown,Unknown,Unknown
+2,Undergraduate Student,Student,Undergraduate
+3,Graduate Student,Student,Graduate
+4,Faculty,Employee,N/A
+5,Staff,Employee,N/A

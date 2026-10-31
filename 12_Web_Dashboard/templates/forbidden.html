@@ -1,0 +1,20 @@
+<!doctype html>
+<!-- forbidden.html: shown when a user opens the dashboard of another role (HTTP 403) -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Access denied - Library Analytics</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="login-wrap">
+    <div class="login">
+      <h1>403 - Access denied</h1>
+      <p>{% if user %}<b>{{ user.username }}</b> ({{ user.role }}) is not allowed to open this dashboard.
+         {% else %}Please sign in first.{% endif %} This attempt was written to the audit log.</p>
+      <a href="{{ home }}"><button type="button">Back to my dashboard</button></a>
+    </div>
+  </div>
+</body>
+</html>

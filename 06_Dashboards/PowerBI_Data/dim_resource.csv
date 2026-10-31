@@ -1,0 +1,48 @@
+resource_key,resource_title,resource_type
+1,Unknown Resource,Unknown
+2,Big Data in Agriculture,Article
+3,Cloud Computing Adoption in Rwanda,Article
+4,Malaria Prevention Strategies,Article
+5,Mobile Money and SMEs,Article
+6,Remote Learning After 2020,Article
+7,Solar Mini-Grids Case Study,Article
+8,Water Quality Monitoring,Article
+9,Women in STEM Education,Article
+10,African Literature Anthology (e-book),E-book
+11,Cell Biology (e-book),E-book
+12,Classroom Assessment Methods (e-book),E-book
+13,Clinical Pharmacology (e-book),E-book
+14,Constitutional Law (e-book),E-book
+15,Criminal Procedure (e-book),E-book
+16,Curriculum Development (e-book),E-book
+17,Data Structures and Algorithms (e-book),E-book
+18,Database Systems Design (e-book),E-book
+19,Educational Psychology (e-book),E-book
+20,Electrical Circuit Analysis (e-book),E-book
+21,Engineering Mathematics (e-book),E-book
+22,Fluid Mechanics Basics (e-book),E-book
+23,General Chemistry (e-book),E-book
+24,Human Anatomy Atlas (e-book),E-book
+25,Introduction to Linguistics (e-book),E-book
+26,Introduction to Microeconomics (e-book),E-book
+27,Law of Contract (e-book),E-book
+28,Marketing Management (e-book),E-book
+29,Principles of Accounting (e-book),E-book
+30,Principles of Public Health (e-book),E-book
+31,Programming Fundamentals with Python (e-book),E-book
+32,University Physics (e-book),E-book
+33,World History Survey (e-book),E-book
+34,African Journal of Engineering Research,Journal
+35,Computational Linguistics Today,Journal
+36,East African Medical Journal,Journal
+37,Information Systems Quarterly,Journal
+38,International Journal of Data Science,Journal
+39,Journal of Applied Computing,Journal
+40,Journal of Business Studies,Journal
+41,Journal of Education Practice,Journal
+42,Journal of Environmental Science,Journal
+43,Journal of Public Health Africa,Journal
+44,Journal of Renewable Energy,Journal
+45,Law and Society Review,Journal
+46,Nursing Research Digest,Journal
+47,Review of Development Economics,Journal

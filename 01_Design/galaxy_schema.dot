@@ -1,0 +1,40 @@
+digraph G {
+  graph [rankdir=LR, splines=true, nodesep=0.35, ranksep=1.1, bgcolor="white", fontname="Helvetica", label="University Library Analytics — Galaxy Schema (3 fact tables sharing conformed dimensions)", labelloc=t, fontsize=20];
+  node [shape=plaintext, fontname="Helvetica", fontsize=11];
+  edge [color="#555555", arrowhead=crow, arrowtail=none];
+  
+  
+  dim_date [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4"><tr><td bgcolor="#1f6f8b"><font color="white"><b>dim_date</b> (conformed)</font></td></tr>
+  <tr><td align="left"><u>date_key</u> PK (YYYYMMDD)</td></tr><tr><td align="left">full_date, day_name, is_weekend</td></tr><tr><td align="left">week_of_year, week_start_date</td></tr><tr><td align="left">month_num, month_name, month_label</td></tr><tr><td align="left">quarter_name, year_num</td></tr><tr><td align="left">academic_year, semester</td></tr></table>>];
+  dim_department [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4"><tr><td bgcolor="#1f6f8b"><font color="white"><b>dim_department</b> (conformed)</font></td></tr>
+  <tr><td align="left"><u>department_key</u> PK</td></tr><tr><td align="left">department_code (CS, ENG…)</td></tr><tr><td align="left">department_name</td></tr><tr><td align="left">faculty_name</td></tr></table>>];
+  dim_student [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4"><tr><td bgcolor="#1f6f8b"><font color="white"><b>dim_student</b> (shared)</font></td></tr>
+  <tr><td align="left"><u>student_key</u> PK</td></tr><tr><td align="left">student_id, student_id_masked</td></tr><tr><td align="left">student_level (UG / Grad)</td></tr><tr><td align="left">year_of_study, gender</td></tr><tr><td align="left">valid_from, valid_to, is_current</td></tr></table>>];
+  dim_book [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4"><tr><td bgcolor="#6c8ebf"><font color="white"><b>dim_book</b></font></td></tr>
+  <tr><td align="left"><u>book_key</u> PK</td></tr><tr><td align="left">isbn, title, author</td></tr><tr><td align="left">publisher, publication_year</td></tr><tr><td align="left">book_category</td></tr></table>>];
+  dim_resource [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4"><tr><td bgcolor="#6c8ebf"><font color="white"><b>dim_resource</b></font></td></tr>
+  <tr><td align="left"><u>resource_key</u> PK</td></tr><tr><td align="left">resource_title</td></tr><tr><td align="left">resource_type (E-book / Journal / Article)</td></tr></table>>];
+  dim_user_type [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4"><tr><td bgcolor="#6c8ebf"><font color="white"><b>dim_user_type</b></font></td></tr>
+  <tr><td align="left"><u>user_type_key</u> PK</td></tr><tr><td align="left">user_type, user_group</td></tr><tr><td align="left">student_level</td></tr></table>>];
+  dim_room [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4"><tr><td bgcolor="#6c8ebf"><font color="white"><b>dim_room</b></font></td></tr>
+  <tr><td align="left"><u>room_key</u> PK</td></tr><tr><td align="left">room_number (R101)</td></tr><tr><td align="left">floor_num, capacity, room_type</td></tr><tr><td align="left">has_projector, has_whiteboard, is_quiet_zone</td></tr></table>>];
+  dim_time_slot [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4"><tr><td bgcolor="#6c8ebf"><font color="white"><b>dim_time_slot</b></font></td></tr>
+  <tr><td align="left"><u>time_slot_key</u> PK</td></tr><tr><td align="left">slot_code, slot_label</td></tr><tr><td align="left">start_hour, end_hour, day_period</td></tr></table>>];
+  dim_purpose [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4"><tr><td bgcolor="#6c8ebf"><font color="white"><b>dim_booking_purpose</b></font></td></tr>
+  <tr><td align="left"><u>purpose_key</u> PK</td></tr><tr><td align="left">purpose_name, purpose_group</td></tr></table>>];
+
+  f_loan [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4"><tr><td bgcolor="#c0504d"><font color="white"><b>fact_book_loan</b></font></td></tr>
+  <tr><td align="left"><i>grain: 1 row per checkout</i></td></tr><tr><td align="left"><u>loan_key</u> PK, transaction_id</td></tr><tr><td align="left">checkout_date_key FK, return_date_key FK</td></tr><tr><td align="left">student_key FK, department_key FK, book_key FK</td></tr><tr><td align="left" bgcolor="#f6dcdb">loan_count, loan_duration_days</td></tr><tr><td align="left" bgcolor="#f6dcdb">is_returned, is_overdue</td></tr></table>>];
+  f_dig [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4"><tr><td bgcolor="#c0504d"><font color="white"><b>fact_digital_usage</b></font></td></tr>
+  <tr><td align="left"><i>grain: 1 row per resource / user type / faculty / day</i></td></tr><tr><td align="left"><u>usage_key</u> PK</td></tr><tr><td align="left">date_key FK, department_key FK</td></tr><tr><td align="left">user_type_key FK, resource_key FK</td></tr><tr><td align="left" bgcolor="#f6dcdb">download_count, duration_minutes</td></tr><tr><td align="left" bgcolor="#f6dcdb">duration_is_missing</td></tr></table>>];
+  f_room [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4"><tr><td bgcolor="#c0504d"><font color="white"><b>fact_room_booking</b></font></td></tr>
+  <tr><td align="left"><i>grain: 1 row per booking</i></td></tr><tr><td align="left"><u>booking_key</u> PK, booking_id</td></tr><tr><td align="left">date_key FK, time_slot_key FK, room_key FK</td></tr><tr><td align="left">student_key FK, department_key FK, purpose_key FK</td></tr><tr><td align="left" bgcolor="#f6dcdb">booking_count, duration_hours</td></tr><tr><td align="left" bgcolor="#f6dcdb">is_walk_in</td></tr></table>>];
+
+  {rank=same; dim_book; dim_resource; dim_user_type; dim_room; dim_time_slot; dim_purpose;}
+  {rank=same; f_loan; f_dig; f_room;}
+  {rank=same; dim_date; dim_department; dim_student;}
+  dim_book -> f_loan; dim_resource -> f_dig; dim_user_type -> f_dig; dim_room -> f_room; dim_time_slot -> f_room; dim_purpose -> f_room;
+  f_loan -> dim_date [dir=back, arrowtail=crow]; f_dig -> dim_date [dir=back, arrowtail=crow]; f_room -> dim_date [dir=back, arrowtail=crow];
+  f_loan -> dim_department [dir=back, arrowtail=crow]; f_dig -> dim_department [dir=back, arrowtail=crow]; f_room -> dim_department [dir=back, arrowtail=crow];
+  f_loan -> dim_student [dir=back, arrowtail=crow]; f_room -> dim_student [dir=back, arrowtail=crow];
+}

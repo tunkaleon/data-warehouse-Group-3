@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{# executive.html: high-level KPIs for the Library Director (whole library) #}
+{% block content %}
+<div class="head">
+  <div>
+    <h1>Executive Dashboard</h1>
+    <p>Key figures for the Library Director &middot; all departments &middot; year {{ data.year }}</p>
+  </div>
+  <span class="spacer"></span>
+  <form method="get">
+    <select name="year" onchange="this.form.submit()" aria-label="Year">
+      {% for y in data.years %}<option value="{{ y }}" {% if y == data.year %}selected{% endif %}>Year: {{ y }}</option>{% endfor %}
+    </select>
+  </form>
+</div>
+
+<div class="grid kpis">
+  {% for k in data.kpis %}
+  <div class="card kpi">
+    <div class="label">{{ k.label }}</div>
+    <div class="value">{{ k.value }}</div>
+    {% if k.change is not none %}
+      {% set went_up = k.change >= 0 %}
+      {% set good = (went_up and k.good_when == 'up') or (not went_up and k.good_when == 'down') %}
+      <div class="note {{ 'up-good' if good else 'up-bad' }}">{{ '&#9650;'|safe if went_up else '&#9660;'|safe }}
+        {{ k.change|abs }}% vs {{ data.year - 1 }}</div>
+    {% else %}<div class="note">first year of data</div>{% endif %}
+  </div>
+  {% endfor %}
+</div>
+
+<div class="grid row-2-1">
+  <div class="card"><h2>Are digital resources replacing physical books? Usage index (2023 average month = 100)</h2>
+    <div class="chart" id="trend"></div></div>
+  <div class="card"><h2>Digital downloads by resource type ({{ data.year }})</h2>
+    <div class="chart" id="mix"></div></div>
+</div>
+
+<div class="grid row-1-1">
+  <div class="card"><h2>Which departments use the library most? ({{ data.year }}, all services)</h2>
+    <div class="chart" id="depts"></div></div>
+  <div class="card"><h2>Top 5 borrowed books ({{ data.year }})</h2>
+    <table>
+      <tr><th>Title</th><th>Category</th><th class="num">Loans</th></tr>
+      {% for b in data.top_books %}
+      <tr><td>{{ loop.index }}. {{ b.title }}</td><td>{{ b.category }}</td><td class="num"><b>{{ b.loans }}</b></td></tr>
+      {% endfor %}
+    </table>
+    {% for a in data.alerts %}<div class="alert" style="margin-top:14px"><span class="dot red">!</span>
+      <div><b>Alert</b><span>{{ a }}</span></div></div>{% endfor %}
+  </div>
+</div>
+{% endblock %}
+
+{% block charts %}
+<script>
+  function drawCharts() {
+  lineChart("trend", DATA.trend.labels, DATA.trend.series, { refLine: 100 });
+  donutChart("mix", DATA.resource_mix, "downloads");
+  barChart("depts", DATA.departments, { labelWidth: 150 });
+  }
+  drawCharts();
+</script>
+{% endblock %}

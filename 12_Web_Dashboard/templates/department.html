@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{# department.html: usage of ONE academic unit. The data comes only from the
+   private my_* tables of the logged-in head (row-level security). #}
+{% block content %}
+<div class="head">
+  <div>
+    <h1>Department Dashboard &middot; {{ user.department }}</h1>
+    <p>Usage by academic unit &middot; {{ data.year or "all years" }} &middot; you see only your own department</p>
+  </div>
+  <span class="spacer"></span>
+  <form method="get">
+    <select name="year" onchange="this.form.submit()" aria-label="Year">
+      <option value="">Year: All</option>
+      {% for y in data.years %}<option value="{{ y }}" {% if y|int == data.year %}selected{% endif %}>Year: {{ y }}</option>{% endfor %}
+    </select>
+  </form>
+</div>
+
+<div class="grid kpis">
+  {% for k in data.kpis %}
+  <div class="card kpi"><div class="label">{{ k.label }}</div><div class="value">{{ k.value }}</div></div>
+  {% endfor %}
+</div>
+
+<div class="grid row-2-1">
+  <div class="card"><h2>Monthly use of the three services</h2><div class="chart" id="trend"></div></div>
+  <div class="card"><h2>Digital downloads by resource type</h2><div class="chart" id="mix"></div></div>
+</div>
+
+<div class="grid row-3">
+  <div class="card"><h2>Undergraduate vs graduate: average loan days</h2><div class="chart" id="levels"></div></div>
+  <div class="card"><h2>Why students book study rooms</h2><div class="chart" id="purposes"></div></div>
+  <div class="card"><h2>Top 5 borrowed books</h2>
+    <table>
+      <tr><th>Title</th><th class="num">Loans</th></tr>
+      {% for b in data.top_books %}<tr><td>{{ b.title }}</td><td class="num"><b>{{ b.loans }}</b></td></tr>{% endfor %}
+    </table>
+  </div>
+</div>
+
+<div class="card"><h2>Latest book loans</h2>
+  <table>
+    <tr><th>Date</th><th>Student</th><th>Level</th><th>Title</th><th>Status</th></tr>
+    {% for r in data.recent %}
+    <tr><td>{{ r.checkout_date }}</td><td>{{ r.student }}</td><td>{{ r.student_level }}</td><td>{{ r.title }}</td>
+        <td><span class="badge {{ 'out' if r.status == 'Out' else '' }}">{{ r.status }}</span></td></tr>
+    {% endfor %}
+  </table>
+  <div class="notice">Student IDs are masked (data protection). Other departments' data is not available to this account.</div>
+</div>
+{% endblock %}
+
+{% block charts %}
+<script>
+  function drawCharts() {
+  lineChart("trend", DATA.trend.labels, DATA.trend.series);
+  donutChart("mix", DATA.resource_mix, "downloads");
+  columnChart("levels", DATA.levels, { colors: ["#e57fa5", "#6650d6"], suffix: " d" });
+  barChart("purposes", DATA.purposes, { labelWidth: 130, color: "#1fa774" });
+  }
+  drawCharts();
+</script>
+{% endblock %}

@@ -1,0 +1,70 @@
+==============================================================================
+ SECURITY TESTS - library_dw.db
+==============================================================================
+
+[1] ANALYST (analyst_amina): read-only, masked StudentID
+  OK       SELECT COUNT(*) FROM fact_book_loan
+           -> ['COUNT(*)'] [(2205,)]
+  OK       SELECT student_id_masked, student_level FROM dim_student LIMIT 3
+           -> ['student_id_masked', 'student_level'] [('STU-****-001', 'Undergraduate'), ('STU-****-002', 'Undergraduate'), ('STU-****-003', 'Undergraduate')]
+  REFUSED  SELECT student_id FROM dim_student          (real ID)
+           -> access to dim_student.student_id is prohibited
+  REFUSED  SELECT * FROM dim_student                    (includes real ID)
+           -> access to dim_student.student_id is prohibited
+  REFUSED  DELETE FROM fact_book_loan WHERE loan_key = 1
+           -> not authorized
+  REFUSED  SELECT * FROM stg_book_transactions         (staging area)
+           -> access to stg_book_transactions.stg_id is prohibited
+  REFUSED  SELECT * FROM sec_users                      (password hashes)
+           -> access to sec_users.username is prohibited
+
+[2] DEPARTMENT HEAD (head_cs): only own department
+  OK       SELECT department_code, COUNT(*) FROM my_book_loans GROUP BY 1
+           -> ['department_code', 'COUNT(*)'] [('CS', 374)]
+  OK       SELECT month_label, book_loans, digital_downloads FROM my_monthly_summary
+           -> ['month_label', 'book_loans', 'digital_downloads', 'room_bookings'] [('2025-12', 8, 106, 13), ('2025-11', 5, 174, 21), ('2025-10', 12, 176, 12)] ...
+  OK       SELECT student, title FROM my_book_loans LIMIT 2
+           -> ['student', 'title'] [('STU-****-092', 'Software Engineering in Practice: Advanced Readings'), ('STU-****-050', 'Computer Networks Explained: Advanced Readings')]
+  REFUSED  SELECT COUNT(*) FROM fact_book_loan          (all departments)
+           -> not authorized
+  REFUSED  SELECT COUNT(*) FROM v_dept_book_loans       (all departments)
+           -> access to dim_department.department_code is prohibited
+
+[2] DEPARTMENT HEAD (head_eng): only own department
+  OK       SELECT department_code, COUNT(*) FROM my_book_loans GROUP BY 1
+           -> ['department_code', 'COUNT(*)'] [('ENG', 404)]
+  OK       SELECT month_label, book_loans, digital_downloads FROM my_monthly_summary
+           -> ['month_label', 'book_loans', 'digital_downloads', 'room_bookings'] [('2025-12', 9, 137, 9), ('2025-11', 16, 259, 19), ('2025-10', 9, 174, 23)] ...
+  OK       SELECT student, title FROM my_book_loans LIMIT 2
+           -> ['student', 'title'] [('STU-****-092', 'Thermodynamics for Engineers: Advanced Readings'), ('STU-****-019', 'Civil Engineering Drawing: Advanced Readings')]
+  REFUSED  SELECT COUNT(*) FROM fact_book_loan          (all departments)
+           -> not authorized
+  REFUSED  SELECT COUNT(*) FROM v_dept_book_loans       (all departments)
+           -> access to dim_department.department_code is prohibited
+
+[3] WRONG PASSWORD 3 TIMES (head_bus) -> account locked
+  attempt 1: Wrong username or password
+  attempt 2: Wrong username or password
+  attempt 3: Wrong username or password - account is now LOCKED
+  correct password now: Account locked until 2026-10-28T18:47:46
+  (admin unlocked head_bus again for the next demo)
+
+[4] ADMIN (lib_admin): a change is recorded by the audit trigger
+  OK       UPDATE dim_student SET valid_to = '9999-12-30' WHERE student_key = 2
+           -> [] []
+  OK       UPDATE dim_student SET valid_to = '9999-12-31' WHERE student_key = 2  (undo)
+           -> [] []
+
+[5] AUDIT LOG - the last 12 events
+  2026-10-27 18:47:47 lib_admin      QUERY                      UPDATE dim_student SET valid_to = '9999-12-31' WHERE student_key = 2
+  2026-10-27 18:47:47 direct database access UPDATE        dim_student  level: Undergraduate -> Undergraduate; department: SCI -> SCI; valid_t
+  2026-10-27 18:47:47 lib_admin      QUERY                      UPDATE dim_student SET valid_to = '9999-12-30' WHERE student_key = 2
+  2026-10-27 18:47:47 direct database access UPDATE        dim_student  level: Undergraduate -> Undergraduate; department: SCI -> SCI; valid_t
+  2026-10-27 18:47:47 lib_admin      LOGIN_OK                   
+  2026-10-27 18:47:46 head_bus       LOGIN_FAILED               account locked
+  2026-10-27 18:47:46 head_bus       LOGIN_FAILED               wrong password (3/3) -> ACCOUNT LOCKED
+  2026-10-27 18:47:45 head_bus       LOGIN_FAILED               wrong password (2/3)
+  2026-10-27 18:47:44 head_bus       LOGIN_FAILED               wrong password (1/3)
+  2026-10-27 18:47:43 head_eng       DENIED                     SELECT COUNT(*) FROM v_dept_book_loans  ->  access to dim_department.d
+  2026-10-27 18:47:43 head_eng       DENIED                     SELECT COUNT(*) FROM fact_book_loan  ->  not authorized
+  2026-10-27 18:47:43 head_eng       QUERY                      SELECT student, title FROM my_book_loans LIMIT 2

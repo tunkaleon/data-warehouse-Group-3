@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{# operational.html: daily operations - study rooms and circulation #}
+{% block content %}
+<div class="head">
+  <div>
+    <h1>Operational Dashboard</h1>
+    <p>Daily operations &middot; study rooms and circulation &middot; data up to {{ data.last_day }}</p>
+  </div>
+</div>
+
+<div class="grid kpis">
+  {% for k in data.kpis %}
+  <div class="card kpi"><div class="label">{{ k.label }}</div><div class="value">{{ k.value }}</div>
+    <div class="note">{{ k.note }}</div></div>
+  {% endfor %}
+</div>
+
+<div class="grid row-1-1">
+  <div class="card"><h2>Peak times: room bookings by day and time slot ({{ data.last_day[:4] }})</h2>
+    <div id="heat"></div></div>
+  <div class="card"><h2>Daily room bookings, last 60 days (bars) and 7-day average (line)</h2>
+    <div class="chart" id="daily"></div></div>
+</div>
+
+<div class="grid row-3">
+  <div class="card"><h2>Room utilisation {{ data.last_day[:4] }} (% of open hours booked)</h2>
+    <div class="chart" id="util"></div></div>
+  <div class="card"><h2>Books not returned: how long out?</h2><div class="chart" id="ages"></div></div>
+  <div class="card"><h2>Alerts</h2>
+    {% for a in data.alerts %}
+    <div class="alert"><span class="dot {{ a.level }}">{{ '&#10003;'|safe if a.level == 'green' else '!' }}</span>
+      <div><b>{{ a.title }}</b><span>{{ a.text }}</span></div></div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
+
+{% block charts %}
+<script>
+  function drawCharts() {
+  heatMap("heat", DATA.heat.days, DATA.heat.slots, DATA.heat.grid);
+  comboChart("daily", DATA.daily.labels, DATA.daily.bookings, DATA.daily.avg7);
+  barChart("util", DATA.utilisation, { labelWidth: 190, color: "#1fa774", suffix: "%" });
+  columnChart("ages", DATA.ages, { color: "#2a78d6" });
+  }
+  drawCharts();
+</script>
+{% endblock %}

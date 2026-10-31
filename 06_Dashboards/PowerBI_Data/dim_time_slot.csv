@@ -1,0 +1,8 @@
+time_slot_key,slot_code,slot_label,start_hour,end_hour,day_period
+1,UNK,Unknown,0,0,Unknown
+2,08-10,08:00 - 10:00,8,10,Morning
+3,10-12,10:00 - 12:00,10,12,Morning
+4,12-14,12:00 - 14:00,12,14,Afternoon
+5,14-16,14:00 - 16:00,14,16,Afternoon
+6,16-18,16:00 - 18:00,16,18,Afternoon
+7,18-20,18:00 - 20:00,18,20,Evening

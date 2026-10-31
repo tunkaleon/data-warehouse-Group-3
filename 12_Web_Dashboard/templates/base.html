@@ -1,0 +1,34 @@
+<!doctype html>
+<!-- base.html: the frame shared by all dashboards (top bar + page area) -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }} - Library Analytics</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='charts.js') }}"></script>
+</head>
+<body>
+  <div class="topbar">
+    <span class="brand">University Library Analytics</span>
+    <span class="spacer"></span>
+    <span class="who">Signed in as <b>{{ user.username }}</b> &middot; role {{ user.role }}
+      {% if user.department %}&middot; department {{ user.department }}{% endif %}</span>
+    <a href="{{ url_for('logout') }}">Log out</a>
+  </div>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+  <script>
+    // the numbers for this page, prepared by dashboard_data.py
+    const DATA = {{ data|tojson }};
+    // draw the charts again when the window changes size (after a short pause)
+    let resizeTimer;
+    window.addEventListener("resize", () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => { if (window.drawCharts) drawCharts(); }, 200);
+    });
+  </script>
+  {% block charts %}{% endblock %}
+</body>
+</html>

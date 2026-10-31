@@ -1,0 +1,90 @@
+=====================================================================
+ Power BI DAX MEASURES - University Library Analytics
+ Create them in Power BI Desktop: Home > New measure, paste ONE block,
+ press Enter. Put them all in a table called "_Measures"
+ (Home > Enter data > name it _Measures > Load).
+ Measure names in [brackets] are used by the dashboard_guide.pdf steps.
+=====================================================================
+
+-- ---------- 1. Basic totals (one per fact table) ----------
+Total Loans = SUM ( fact_book_loan[loan_count] )
+
+Total Downloads = SUM ( fact_digital_usage[download_count] )
+
+Total Bookings = SUM ( fact_room_booking[booking_count] )
+
+Total Usage = [Total Loans] + [Total Downloads] + [Total Bookings]
+
+Hours Booked = SUM ( fact_room_booking[duration_hours] )
+
+
+-- ---------- 2. Efficiency (question 5) ----------
+Avg Loan Days =
+CALCULATE (
+    AVERAGE ( fact_book_loan[loan_duration_days] ),
+    fact_book_loan[is_returned] = 1
+)
+
+Overdue % =
+DIVIDE (
+    CALCULATE ( COUNTROWS ( fact_book_loan ), fact_book_loan[is_overdue] = 1, fact_book_loan[is_returned] = 1 ),
+    CALCULATE ( COUNTROWS ( fact_book_loan ), fact_book_loan[is_returned] = 1 )
+)
+
+Books Currently Out = CALCULATE ( COUNTROWS ( fact_book_loan ), fact_book_loan[is_returned] = 0 )
+
+
+-- ---------- 3. Compared with last year (KPI cards) ----------
+-- needs dim_date marked as the date table (guide step 4)
+Loans PY = CALCULATE ( [Total Loans], SAMEPERIODLASTYEAR ( dim_date[full_date] ) )
+Loans YoY % = DIVIDE ( [Total Loans] - [Loans PY], [Loans PY] )
+
+Downloads PY = CALCULATE ( [Total Downloads], SAMEPERIODLASTYEAR ( dim_date[full_date] ) )
+Downloads YoY % = DIVIDE ( [Total Downloads] - [Downloads PY], [Downloads PY] )
+
+Bookings PY = CALCULATE ( [Total Bookings], SAMEPERIODLASTYEAR ( dim_date[full_date] ) )
+Bookings YoY % = DIVIDE ( [Total Bookings] - [Bookings PY], [Bookings PY] )
+
+
+-- ---------- 4. Digital vs physical (question "are digital resources replacing books?") ----------
+Downloads per Loan = DIVIDE ( [Total Downloads], [Total Loans] )
+
+-- Index: 100 = an average month of 2023. Put the three on ONE line chart.
+Loans Index =
+VAR base = CALCULATE ( [Total Loans], dim_date[year_num] = 2023, REMOVEFILTERS ( dim_date ) ) / 12
+RETURN DIVIDE ( [Total Loans], base ) * 100
+
+Downloads Index =
+VAR base = CALCULATE ( [Total Downloads], dim_date[year_num] = 2023, REMOVEFILTERS ( dim_date ) ) / 12
+RETURN DIVIDE ( [Total Downloads], base ) * 100
+
+Bookings Index =
+VAR base = CALCULATE ( [Total Bookings], dim_date[year_num] = 2023, REMOVEFILTERS ( dim_date ) ) / 12
+RETURN DIVIDE ( [Total Bookings], base ) * 100
+
+Journal Share % =
+DIVIDE ( CALCULATE ( [Total Downloads], dim_resource[resource_type] = "Journal" ), [Total Downloads] )
+
+
+-- ---------- 5. Operations (rooms) ----------
+Real Rooms = CALCULATE ( COUNTROWS ( dim_room ), dim_room[room_key] <> 1 )
+
+-- open 12 hours a day (6 slots x 2 hours)
+Room Utilisation % =
+DIVIDE ( [Hours Booked], DISTINCTCOUNT ( dim_date[date_key] ) * 12 * [Real Rooms] )
+
+Walk-in % =
+DIVIDE ( CALCULATE ( [Total Bookings], fact_room_booking[is_walk_in] = 1 ), [Total Bookings] )
+
+
+-- ---------- 6. Anomaly flag (question 13) ----------
+-- Use in a table/line visual with dim_date[month_label] on rows.
+-- "Normal" = average of the same calendar month in the OTHER two years.
+Downloads Normal Month =
+VAR m = SELECTEDVALUE ( dim_date[month_num] )
+VAR all_years = CALCULATE ( [Total Downloads], REMOVEFILTERS ( dim_date ),
+                            dim_date[month_num] = m, dim_date[year_num] IN { 2023, 2024, 2025 } )
+RETURN DIVIDE ( all_years - [Total Downloads], 2 )
+
+Anomaly =
+IF ( [Total Downloads] < 0.5 * [Downloads Normal Month], "ANOMALY - sudden drop", "normal" )

@@ -1,0 +1,8 @@
+purpose_key,purpose_name,purpose_group
+1,Unknown,Unknown
+2,Study,Individual
+3,Exam Preparation,Individual
+4,Research,Individual
+5,Group Project,Collaborative
+6,Meeting,Collaborative
+7,Tutorial,Collaborative

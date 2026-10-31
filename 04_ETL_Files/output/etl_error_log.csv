@@ -1,0 +1,528 @@
+error_id,batch_id,source_table,source_row_num,column_name,bad_value,error_type,action_taken,message
+1,1,stg_book_transactions,171,TransactionID,1169,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+2,1,stg_book_transactions,223,TransactionID,1220,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+3,1,stg_book_transactions,329,TransactionID,1325,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+4,1,stg_book_transactions,352,TransactionID,1347,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+5,1,stg_book_transactions,410,TransactionID,1404,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+6,1,stg_book_transactions,431,TransactionID,1424,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+7,1,stg_book_transactions,438,TransactionID,1430,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+8,1,stg_book_transactions,517,TransactionID,1508,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+9,1,stg_book_transactions,549,TransactionID,1539,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+10,1,stg_book_transactions,577,TransactionID,1566,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+11,1,stg_book_transactions,608,TransactionID,1596,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+12,1,stg_book_transactions,656,TransactionID,1643,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+13,1,stg_book_transactions,771,TransactionID,1757,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+14,1,stg_book_transactions,785,TransactionID,1770,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+15,1,stg_book_transactions,986,TransactionID,1970,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+16,1,stg_book_transactions,1016,TransactionID,1999,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+17,1,stg_book_transactions,1091,TransactionID,2073,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+18,1,stg_book_transactions,1144,TransactionID,2125,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+19,1,stg_book_transactions,1263,TransactionID,2243,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+20,1,stg_book_transactions,1363,TransactionID,2342,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+21,1,stg_book_transactions,1367,TransactionID,2345,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+22,1,stg_book_transactions,1373,TransactionID,2350,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+23,1,stg_book_transactions,1403,TransactionID,2379,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+24,1,stg_book_transactions,1412,TransactionID,2387,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+25,1,stg_book_transactions,1433,TransactionID,2407,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+26,1,stg_book_transactions,1482,TransactionID,2455,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+27,1,stg_book_transactions,1513,TransactionID,2485,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+28,1,stg_book_transactions,1525,TransactionID,2496,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+29,1,stg_book_transactions,1565,TransactionID,2535,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+30,1,stg_book_transactions,1619,TransactionID,2588,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+31,1,stg_book_transactions,1748,TransactionID,2716,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+32,1,stg_book_transactions,1767,TransactionID,2734,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+33,1,stg_book_transactions,1823,TransactionID,2789,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+34,1,stg_book_transactions,1893,TransactionID,2858,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+35,1,stg_book_transactions,1949,TransactionID,2913,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+36,1,stg_book_transactions,2028,TransactionID,2991,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+37,1,stg_book_transactions,2094,TransactionID,3056,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+38,1,stg_book_transactions,2106,TransactionID,3067,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+39,1,stg_book_transactions,2143,TransactionID,3103,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+40,1,stg_book_transactions,2152,TransactionID,3111,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+41,1,stg_book_transactions,2197,TransactionID,3155,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+42,1,stg_book_transactions,2199,TransactionID,3156,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+43,1,stg_book_transactions,2207,TransactionID,3163,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+44,1,stg_book_transactions,2240,TransactionID,3195,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+45,1,stg_book_transactions,13,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> SCI
+46,1,stg_book_transactions,117,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> BUS
+47,1,stg_book_transactions,142,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> MED
+48,1,stg_book_transactions,160,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> EDU
+49,1,stg_book_transactions,189,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> LAW
+50,1,stg_book_transactions,229,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> ART
+51,1,stg_book_transactions,257,ReturnDate,"Apr 02, 2023",INVALID_RANGE,REJECTED,Return date is before checkout date (2023-04-17)
+52,1,stg_book_transactions,261,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> LAW
+53,1,stg_book_transactions,321,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> ENG
+54,1,stg_book_transactions,340,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> BUS
+55,1,stg_book_transactions,359,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> BUS
+56,1,stg_book_transactions,424,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> CS
+57,1,stg_book_transactions,452,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> CS
+58,1,stg_book_transactions,458,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> ENG
+59,1,stg_book_transactions,480,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> BUS
+60,1,stg_book_transactions,520,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> BUS
+61,1,stg_book_transactions,550,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> MED
+62,1,stg_book_transactions,560,BookISBN,978-1238724937,UNKNOWN_REFERENCE,DEFAULTED,ISBN not in the book catalogue -> Unknown Book
+63,1,stg_book_transactions,576,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> ENG
+64,1,stg_book_transactions,592,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> EDU
+65,1,stg_book_transactions,611,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> BUS
+66,1,stg_book_transactions,637,BookISBN,978-7979007049,UNKNOWN_REFERENCE,DEFAULTED,ISBN not in the book catalogue -> Unknown Book
+67,1,stg_book_transactions,715,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> LAW
+68,1,stg_book_transactions,744,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> MED
+69,1,stg_book_transactions,750,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> CS
+70,1,stg_book_transactions,816,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> BUS
+71,1,stg_book_transactions,819,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> BUS
+72,1,stg_book_transactions,862,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> LAW
+73,1,stg_book_transactions,877,CheckoutDate,2023-00-12,INVALID_DATE,REJECTED,Checkout date is not a valid date in 2023-2025
+74,1,stg_book_transactions,889,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> EDU
+75,1,stg_book_transactions,922,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> BUS
+76,1,stg_book_transactions,927,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> ART
+77,1,stg_book_transactions,988,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> ENG
+78,1,stg_book_transactions,992,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> ENG
+79,1,stg_book_transactions,1027,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> CS
+80,1,stg_book_transactions,1050,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> ENG
+81,1,stg_book_transactions,1051,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> MED
+82,1,stg_book_transactions,1086,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> LAW
+83,1,stg_book_transactions,1092,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> MED
+84,1,stg_book_transactions,1110,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> BUS
+85,1,stg_book_transactions,1184,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> BUS
+86,1,stg_book_transactions,1208,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> LAW
+87,1,stg_book_transactions,1215,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> ENG
+88,1,stg_book_transactions,1216,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> CS
+89,1,stg_book_transactions,1221,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> SCI
+90,1,stg_book_transactions,1248,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> SCI
+91,1,stg_book_transactions,1270,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> SCI
+92,1,stg_book_transactions,1280,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> CS
+93,1,stg_book_transactions,1294,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> ART
+94,1,stg_book_transactions,1314,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> ENG
+95,1,stg_book_transactions,1323,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> CS
+96,1,stg_book_transactions,1330,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> MED
+97,1,stg_book_transactions,1331,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> BUS
+98,1,stg_book_transactions,1386,CheckoutDate,N/A,INVALID_DATE,REJECTED,Checkout date is not a valid date in 2023-2025
+99,1,stg_book_transactions,1447,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> EDU
+100,1,stg_book_transactions,1470,CheckoutDate,N/A,INVALID_DATE,REJECTED,Checkout date is not a valid date in 2023-2025
+101,1,stg_book_transactions,1478,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> BUS
+102,1,stg_book_transactions,1481,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> SCI
+103,1,stg_book_transactions,1538,CheckoutDate,2023-00-12,INVALID_DATE,REJECTED,Checkout date is not a valid date in 2023-2025
+104,1,stg_book_transactions,1545,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> EDU
+105,1,stg_book_transactions,1567,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> BUS
+106,1,stg_book_transactions,1569,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> CS
+107,1,stg_book_transactions,1578,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> EDU
+108,1,stg_book_transactions,1591,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> ART
+109,1,stg_book_transactions,1594,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> MED
+110,1,stg_book_transactions,1721,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> CS
+111,1,stg_book_transactions,1750,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> ART
+112,1,stg_book_transactions,1795,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> CS
+113,1,stg_book_transactions,1806,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> ART
+114,1,stg_book_transactions,1829,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> EDU
+115,1,stg_book_transactions,1864,BookISBN,978-5594849679,UNKNOWN_REFERENCE,DEFAULTED,ISBN not in the book catalogue -> Unknown Book
+116,1,stg_book_transactions,1875,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> EDU
+117,1,stg_book_transactions,1923,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> MED
+118,1,stg_book_transactions,1957,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> CS
+119,1,stg_book_transactions,2019,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> MED
+120,1,stg_book_transactions,2032,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> EDU
+121,1,stg_book_transactions,2065,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> CS
+122,1,stg_book_transactions,2084,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> EDU
+123,1,stg_book_transactions,2119,BookISBN,978-7774592542,UNKNOWN_REFERENCE,DEFAULTED,ISBN not in the book catalogue -> Unknown Book
+124,1,stg_book_transactions,2122,ReturnDate,2025-10-22,INVALID_RANGE,REJECTED,Return date is before checkout date (2025-10-28)
+125,1,stg_book_transactions,2131,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> ART
+126,1,stg_book_transactions,2132,ReturnDate,2025-10-27,INVALID_RANGE,REJECTED,Return date is before checkout date (2025-11-05)
+127,1,stg_book_transactions,2167,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> MED
+128,1,stg_book_transactions,2187,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> SCI
+129,1,stg_book_transactions,2200,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> LAW
+130,1,stg_book_transactions,2228,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> BUS
+131,1,stg_book_transactions,2263,Department,,MISSING_VALUE,CORRECTED,Department filled from student master data -> BUS
+132,1,stg_book_transactions,2258,TransactionID,3213,DUPLICATE_LOGICAL,REJECTED,"Same student, book and checkout date as an earlier transaction"
+133,1,stg_book_transactions,2259,TransactionID,3214,DUPLICATE_LOGICAL,REJECTED,"Same student, book and checkout date as an earlier transaction"
+134,1,stg_book_transactions,2260,TransactionID,3215,DUPLICATE_LOGICAL,REJECTED,"Same student, book and checkout date as an earlier transaction"
+135,1,stg_book_transactions,2261,TransactionID,3216,DUPLICATE_LOGICAL,REJECTED,"Same student, book and checkout date as an earlier transaction"
+136,1,stg_book_transactions,2262,TransactionID,3217,DUPLICATE_LOGICAL,REJECTED,"Same student, book and checkout date as an earlier transaction"
+137,1,stg_book_transactions,2263,TransactionID,3218,DUPLICATE_LOGICAL,REJECTED,"Same student, book and checkout date as an earlier transaction"
+138,1,stg_book_transactions,2264,TransactionID,3219,DUPLICATE_LOGICAL,REJECTED,"Same student, book and checkout date as an earlier transaction"
+139,1,stg_book_transactions,2265,TransactionID,3220,DUPLICATE_LOGICAL,REJECTED,"Same student, book and checkout date as an earlier transaction"
+140,1,stg_book_transactions,2266,TransactionID,3221,DUPLICATE_LOGICAL,REJECTED,"Same student, book and checkout date as an earlier transaction"
+141,1,stg_book_transactions,2267,TransactionID,3222,DUPLICATE_LOGICAL,REJECTED,"Same student, book and checkout date as an earlier transaction"
+142,1,stg_book_transactions,2268,TransactionID,3223,DUPLICATE_LOGICAL,REJECTED,"Same student, book and checkout date as an earlier transaction"
+143,1,stg_book_transactions,2269,TransactionID,3224,DUPLICATE_LOGICAL,REJECTED,"Same student, book and checkout date as an earlier transaction"
+144,1,stg_book_transactions,2270,TransactionID,3225,DUPLICATE_LOGICAL,REJECTED,"Same student, book and checkout date as an earlier transaction"
+145,1,stg_book_transactions,2271,TransactionID,3226,DUPLICATE_LOGICAL,REJECTED,"Same student, book and checkout date as an earlier transaction"
+146,1,stg_book_transactions,2272,TransactionID,3227,DUPLICATE_LOGICAL,REJECTED,"Same student, book and checkout date as an earlier transaction"
+147,1,stg_book_transactions,2273,TransactionID,3228,DUPLICATE_LOGICAL,REJECTED,"Same student, book and checkout date as an earlier transaction"
+148,1,stg_book_transactions,2274,TransactionID,3229,DUPLICATE_LOGICAL,REJECTED,"Same student, book and checkout date as an earlier transaction"
+149,1,stg_book_transactions,2275,TransactionID,3230,DUPLICATE_LOGICAL,REJECTED,"Same student, book and checkout date as an earlier transaction"
+150,1,stg_book_transactions,2276,TransactionID,3231,DUPLICATE_LOGICAL,REJECTED,"Same student, book and checkout date as an earlier transaction"
+151,1,stg_book_transactions,2277,TransactionID,3232,DUPLICATE_LOGICAL,REJECTED,"Same student, book and checkout date as an earlier transaction"
+152,1,stg_book_transactions,2278,TransactionID,3233,DUPLICATE_LOGICAL,REJECTED,"Same student, book and checkout date as an earlier transaction"
+153,1,stg_book_transactions,2279,TransactionID,3234,DUPLICATE_LOGICAL,REJECTED,"Same student, book and checkout date as an earlier transaction"
+154,1,stg_digital_usage,424,Date,06/30/2023,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+155,1,stg_digital_usage,450,Date,06/20/2023,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+156,1,stg_digital_usage,498,Date,05/02/2023,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+157,1,stg_digital_usage,532,Date,10/03/2023,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+158,1,stg_digital_usage,554,Date,11/03/2023,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+159,1,stg_digital_usage,646,Date,11/27/2023,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+160,1,stg_digital_usage,686,Date,11/03/2023,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+161,1,stg_digital_usage,692,Date,12/06/2023,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+162,1,stg_digital_usage,753,Date,09/08/2023,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+163,1,stg_digital_usage,863,Date,11/26/2023,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+164,1,stg_digital_usage,930,Date,09/07/2023,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+165,1,stg_digital_usage,933,Date,05/02/2023,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+166,1,stg_digital_usage,987,Date,06/05/2023,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+167,1,stg_digital_usage,1059,Date,02/05/2023,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+168,1,stg_digital_usage,1065,Date,11/17/2023,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+169,1,stg_digital_usage,1082,Date,03/23/2023,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+170,1,stg_digital_usage,376,Date,2024-07-03,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+171,1,stg_digital_usage,579,Date,2024-19-07,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+172,1,stg_digital_usage,622,Date,2024-31-01,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+173,1,stg_digital_usage,684,Date,2024-01-04,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+174,1,stg_digital_usage,701,Date,2024-20-09,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+175,1,stg_digital_usage,774,Date,2024-04-06,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+176,1,stg_digital_usage,852,Date,2024-20-05,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+177,1,stg_digital_usage,895,Date,2024-07-05,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+178,1,stg_digital_usage,919,Date,2024-11-12,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+179,1,stg_digital_usage,952,Date,2024-02-06,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+180,1,stg_digital_usage,954,Date,2024-04-04,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+181,1,stg_digital_usage,966,Date,2024-28-10,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+182,1,stg_digital_usage,1102,Date,2024-30-04,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+183,1,stg_digital_usage,1129,Date,2024-03-06,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+184,1,stg_digital_usage,1209,Date,2024-04-11,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+185,1,stg_digital_usage,1234,Date,2024-31-10,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+186,1,stg_digital_usage,1250,Date,2024-05-09,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+187,1,stg_digital_usage,1292,Date,2024-14-09,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+188,1,stg_digital_usage,1303,Date,2024-04-02,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+189,1,stg_digital_usage,63,Date,"Nov 12, 2025",DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+190,1,stg_digital_usage,162,Date,"Dec 21, 2025",DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+191,1,stg_digital_usage,519,Date,"Apr 17, 2025",DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+192,1,stg_digital_usage,577,Date,"Jan 14, 2025",DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+193,1,stg_digital_usage,683,Date,"Mar 04, 2025",DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+194,1,stg_digital_usage,845,Date,"Nov 11, 2025",DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+195,1,stg_digital_usage,903,Date,"Mar 13, 2025",DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+196,1,stg_digital_usage,948,Date,"Dec 10, 2025",DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+197,1,stg_digital_usage,963,Date,"May 16, 2025",DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+198,1,stg_digital_usage,978,Date,"Oct 10, 2025",DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+199,1,stg_digital_usage,1075,Date,"Sep 25, 2025",DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+200,1,stg_digital_usage,1081,Date,"May 05, 2025",DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+201,1,stg_digital_usage,1167,Date,"Nov 24, 2025",DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+202,1,stg_digital_usage,1184,Date,"Nov 22, 2025",DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+203,1,stg_digital_usage,1196,Date,"Jan 06, 2025",DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+204,1,stg_digital_usage,1266,Date,"Feb 12, 2025",DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+205,1,stg_digital_usage,1353,Date,"May 04, 2025",DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+206,1,stg_digital_usage,1386,Date,"May 18, 2025",DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+207,1,stg_digital_usage,1428,Date,"Feb 17, 2025",DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+208,1,stg_digital_usage,1442,Date,"Nov 10, 2025",DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+209,1,stg_digital_usage,1443,Date,"Feb 02, 2025",DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+210,1,stg_digital_usage,1574,Date,"Feb 15, 2025",DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+211,1,stg_digital_usage,1591,Date,"Oct 07, 2025",DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+212,1,stg_digital_usage,1643,Date,"Jan 02, 2025",DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+213,1,stg_digital_usage,1666,Date,"May 19, 2025",DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+214,1,stg_digital_usage,32,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+215,1,stg_digital_usage,78,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+216,1,stg_digital_usage,148,ResourceTitle,"QUARTER 1 TOTAL = 1,131",SUBTOTAL_ROW,REJECTED,"Manual subtotal row, not a real download record"
+217,1,stg_digital_usage,154,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+218,1,stg_digital_usage,183,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+219,1,stg_digital_usage,187,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+220,1,stg_digital_usage,189,DownloadCount, 1 ,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 1
+221,1,stg_digital_usage,239,DownloadCount,2.0,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 2
+222,1,stg_digital_usage,243,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+223,1,stg_digital_usage,248,ResourceTitle,"QUARTER 2 TOTAL = 1,576",SUBTOTAL_ROW,REJECTED,"Manual subtotal row, not a real download record"
+224,1,stg_digital_usage,265,DownloadCount, 1 ,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 1
+225,1,stg_digital_usage,272,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+226,1,stg_digital_usage,296,DownloadCount, 2 ,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 2
+227,1,stg_digital_usage,300,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+228,1,stg_digital_usage,360,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+229,1,stg_digital_usage,409,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+230,1,stg_digital_usage,428,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+231,1,stg_digital_usage,430,DownloadCount,3.0,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 3
+232,1,stg_digital_usage,432,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+233,1,stg_digital_usage,479,DownloadCount, 1 ,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 1
+234,1,stg_digital_usage,481,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+235,1,stg_digital_usage,513,ResourceTitle,QUARTER 3 TOTAL = 696,SUBTOTAL_ROW,REJECTED,"Manual subtotal row, not a real download record"
+236,1,stg_digital_usage,530,DownloadCount,two,INVALID_NUMBER,REJECTED,DownloadCount must be a whole number between 0 and 5000
+237,1,stg_digital_usage,570,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+238,1,stg_digital_usage,586,DownloadCount, 6 ,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 6
+239,1,stg_digital_usage,625,DownloadCount, 7 ,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 7
+240,1,stg_digital_usage,634,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+241,1,stg_digital_usage,650,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+242,1,stg_digital_usage,655,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+243,1,stg_digital_usage,698,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+244,1,stg_digital_usage,713,DownloadCount,7.0,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 7
+245,1,stg_digital_usage,776,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+246,1,stg_digital_usage,778,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+247,1,stg_digital_usage,821,DownloadCount, 1 ,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 1
+248,1,stg_digital_usage,836,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+249,1,stg_digital_usage,842,ResourceTitle,"QUARTER 4 TOTAL = 1,585",SUBTOTAL_ROW,REJECTED,"Manual subtotal row, not a real download record"
+250,1,stg_digital_usage,934,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+251,1,stg_digital_usage,941,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+252,1,stg_digital_usage,988,DownloadCount, 3 ,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 3
+253,1,stg_digital_usage,1006,DownloadCount, 4 ,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 4
+254,1,stg_digital_usage,1027,DownloadCount, 1 ,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 1
+255,1,stg_digital_usage,1039,DownloadCount,32.0,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 32
+256,1,stg_digital_usage,1040,DownloadCount, 5 ,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 5
+257,1,stg_digital_usage,1113,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+258,1,stg_digital_usage,4,DownloadCount, 5 ,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 5
+259,1,stg_digital_usage,30,DownloadCount,-3,INVALID_NUMBER,REJECTED,DownloadCount must be a whole number between 0 and 5000
+260,1,stg_digital_usage,33,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+261,1,stg_digital_usage,35,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+262,1,stg_digital_usage,58,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+263,1,stg_digital_usage,63,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+264,1,stg_digital_usage,85,DownloadCount, 2 ,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 2
+265,1,stg_digital_usage,87,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+266,1,stg_digital_usage,177,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+267,1,stg_digital_usage,247,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+268,1,stg_digital_usage,260,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+269,1,stg_digital_usage,299,DownloadCount, 6 ,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 6
+270,1,stg_digital_usage,304,DownloadCount, 2 ,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 2
+271,1,stg_digital_usage,369,DownloadCount,-3,INVALID_NUMBER,REJECTED,DownloadCount must be a whole number between 0 and 5000
+272,1,stg_digital_usage,405,DownloadCount,two,INVALID_NUMBER,REJECTED,DownloadCount must be a whole number between 0 and 5000
+273,1,stg_digital_usage,427,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+274,1,stg_digital_usage,436,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+275,1,stg_digital_usage,448,DownloadCount,-3,INVALID_NUMBER,REJECTED,DownloadCount must be a whole number between 0 and 5000
+276,1,stg_digital_usage,450,DownloadCount,5.0,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 5
+277,1,stg_digital_usage,463,DownloadCount,-3,INVALID_NUMBER,REJECTED,DownloadCount must be a whole number between 0 and 5000
+278,1,stg_digital_usage,517,ResourceTitle,"QUARTER 4 TOTAL = 1,451",SUBTOTAL_ROW,REJECTED,"Manual subtotal row, not a real download record"
+279,1,stg_digital_usage,538,DownloadCount,two,INVALID_NUMBER,REJECTED,DownloadCount must be a whole number between 0 and 5000
+280,1,stg_digital_usage,673,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+281,1,stg_digital_usage,688,DownloadCount,N/A,INVALID_NUMBER,REJECTED,DownloadCount must be a whole number between 0 and 5000
+282,1,stg_digital_usage,691,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+283,1,stg_digital_usage,758,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+284,1,stg_digital_usage,854,ResourceTitle,"QUARTER 2 TOTAL = 1,723",SUBTOTAL_ROW,REJECTED,"Manual subtotal row, not a real download record"
+285,1,stg_digital_usage,864,DownloadCount, 2 ,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 2
+286,1,stg_digital_usage,866,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+287,1,stg_digital_usage,905,ResourceTitle,"QUARTER 3 TOTAL = 1,060",SUBTOTAL_ROW,REJECTED,"Manual subtotal row, not a real download record"
+288,1,stg_digital_usage,1008,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+289,1,stg_digital_usage,1016,DownloadCount,-3,INVALID_NUMBER,REJECTED,DownloadCount must be a whole number between 0 and 5000
+290,1,stg_digital_usage,1043,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+291,1,stg_digital_usage,1066,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+292,1,stg_digital_usage,1131,DownloadCount,20.0,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 20
+293,1,stg_digital_usage,1166,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+294,1,stg_digital_usage,1184,DownloadCount,4.0,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 4
+295,1,stg_digital_usage,1187,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+296,1,stg_digital_usage,1200,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+297,1,stg_digital_usage,1225,ResourceTitle,"QUARTER 1 TOTAL = 1,600",SUBTOTAL_ROW,REJECTED,"Manual subtotal row, not a real download record"
+298,1,stg_digital_usage,1244,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+299,1,stg_digital_usage,1249,DownloadCount, 7 ,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 7
+300,1,stg_digital_usage,15,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+301,1,stg_digital_usage,31,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+302,1,stg_digital_usage,97,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+303,1,stg_digital_usage,122,DownloadCount,2.0,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 2
+304,1,stg_digital_usage,153,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+305,1,stg_digital_usage,179,DownloadCount, 3 ,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 3
+306,1,stg_digital_usage,256,ResourceTitle,"QUARTER 2 TOTAL = 2,084",SUBTOTAL_ROW,REJECTED,"Manual subtotal row, not a real download record"
+307,1,stg_digital_usage,283,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+308,1,stg_digital_usage,335,DownloadCount, 6 ,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 6
+309,1,stg_digital_usage,406,DownloadCount,N/A,INVALID_NUMBER,REJECTED,DownloadCount must be a whole number between 0 and 5000
+310,1,stg_digital_usage,414,DownloadCount,1.0,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 1
+311,1,stg_digital_usage,418,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+312,1,stg_digital_usage,437,DownloadCount,two,INVALID_NUMBER,REJECTED,DownloadCount must be a whole number between 0 and 5000
+313,1,stg_digital_usage,493,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+314,1,stg_digital_usage,498,DownloadCount, 2 ,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 2
+315,1,stg_digital_usage,502,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+316,1,stg_digital_usage,560,DownloadCount, 6 ,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 6
+317,1,stg_digital_usage,582,DownloadCount,-3,INVALID_NUMBER,REJECTED,DownloadCount must be a whole number between 0 and 5000
+318,1,stg_digital_usage,583,DownloadCount, 1 ,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 1
+319,1,stg_digital_usage,587,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+320,1,stg_digital_usage,617,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+321,1,stg_digital_usage,626,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+322,1,stg_digital_usage,660,DownloadCount,5.0,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 5
+323,1,stg_digital_usage,675,ResourceTitle,"QUARTER 3 TOTAL = 1,222",SUBTOTAL_ROW,REJECTED,"Manual subtotal row, not a real download record"
+324,1,stg_digital_usage,678,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+325,1,stg_digital_usage,698,DownloadCount,two,INVALID_NUMBER,REJECTED,DownloadCount must be a whole number between 0 and 5000
+326,1,stg_digital_usage,709,DownloadCount,1.0,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 1
+327,1,stg_digital_usage,750,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+328,1,stg_digital_usage,825,DownloadCount,1.0,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 1
+329,1,stg_digital_usage,914,DownloadCount,N/A,INVALID_NUMBER,REJECTED,DownloadCount must be a whole number between 0 and 5000
+330,1,stg_digital_usage,924,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+331,1,stg_digital_usage,937,DownloadCount,two,INVALID_NUMBER,REJECTED,DownloadCount must be a whole number between 0 and 5000
+332,1,stg_digital_usage,961,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+333,1,stg_digital_usage,965,DownloadCount,5.0,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 5
+334,1,stg_digital_usage,974,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+335,1,stg_digital_usage,1005,DownloadCount, 1 ,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 1
+336,1,stg_digital_usage,1022,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+337,1,stg_digital_usage,1060,DownloadCount, 2 ,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 2
+338,1,stg_digital_usage,1093,DownloadCount,4.0,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 4
+339,1,stg_digital_usage,1111,DownloadCount,two,INVALID_NUMBER,REJECTED,DownloadCount must be a whole number between 0 and 5000
+340,1,stg_digital_usage,1199,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+341,1,stg_digital_usage,1204,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+342,1,stg_digital_usage,1211,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+343,1,stg_digital_usage,1233,DownloadCount, 15 ,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 15
+344,1,stg_digital_usage,1262,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+345,1,stg_digital_usage,1331,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+346,1,stg_digital_usage,1375,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+347,1,stg_digital_usage,1384,DownloadCount,7.0,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 7
+348,1,stg_digital_usage,1385,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+349,1,stg_digital_usage,1390,ResourceTitle,"QUARTER 4 TOTAL = 2,316",SUBTOTAL_ROW,REJECTED,"Manual subtotal row, not a real download record"
+350,1,stg_digital_usage,1408,DownloadCount,two,INVALID_NUMBER,REJECTED,DownloadCount must be a whole number between 0 and 5000
+351,1,stg_digital_usage,1419,DownloadCount,-3,INVALID_NUMBER,REJECTED,DownloadCount must be a whole number between 0 and 5000
+352,1,stg_digital_usage,1421,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+353,1,stg_digital_usage,1461,ResourceTitle,"QUARTER 1 TOTAL = 1,961",SUBTOTAL_ROW,REJECTED,"Manual subtotal row, not a real download record"
+354,1,stg_digital_usage,1463,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+355,1,stg_digital_usage,1475,DownloadCount,2.0,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 2
+356,1,stg_digital_usage,1503,DownloadCount,15.0,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 15
+357,1,stg_digital_usage,1536,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+358,1,stg_digital_usage,1558,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+359,1,stg_digital_usage,1599,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+360,1,stg_digital_usage,1606,DownloadCount,9.0,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 9
+361,1,stg_digital_usage,1633,DownloadCount,1.0,TEXT_NUMBER,CORRECTED,Number stored as text (spaces/commas/decimals) -> 1
+362,1,stg_digital_usage,1646,Faculty,,MISSING_VALUE,DEFAULTED,Faculty missing or unknown -> Unknown department
+363,1,stg_room_bookings,218,BookingID,5496,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+364,1,stg_room_bookings,363,BookingID,6808,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+365,1,stg_room_bookings,480,BookingID,7098,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+366,1,stg_room_bookings,659,BookingID,7446,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+367,1,stg_room_bookings,679,BookingID,6476,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+368,1,stg_room_bookings,712,BookingID,6871,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+369,1,stg_room_bookings,716,BookingID,7068,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+370,1,stg_room_bookings,852,BookingID,7207,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+371,1,stg_room_bookings,908,BookingID,5548,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+372,1,stg_room_bookings,917,BookingID,7472,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+373,1,stg_room_bookings,1018,BookingID,5658,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+374,1,stg_room_bookings,1045,BookingID,5845,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+375,1,stg_room_bookings,1050,BookingID,6016,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+376,1,stg_room_bookings,1057,BookingID,6000,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+377,1,stg_room_bookings,1084,BookingID,7830,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+378,1,stg_room_bookings,1091,BookingID,6114,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+379,1,stg_room_bookings,1222,BookingID,6219,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+380,1,stg_room_bookings,1229,BookingID,7697,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+381,1,stg_room_bookings,1267,BookingID,7175,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+382,1,stg_room_bookings,1295,BookingID,6802,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+383,1,stg_room_bookings,1297,BookingID,6298,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+384,1,stg_room_bookings,1414,BookingID,5447,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+385,1,stg_room_bookings,1419,BookingID,5528,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+386,1,stg_room_bookings,1462,BookingID,6295,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+387,1,stg_room_bookings,1537,BookingID,5030,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+388,1,stg_room_bookings,1542,BookingID,7802,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+389,1,stg_room_bookings,1575,BookingID,6853,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+390,1,stg_room_bookings,1588,BookingID,6676,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+391,1,stg_room_bookings,1592,BookingID,7729,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+392,1,stg_room_bookings,1660,BookingID,6123,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+393,1,stg_room_bookings,1709,BookingID,5898,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+394,1,stg_room_bookings,1748,BookingID,5075,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+395,1,stg_room_bookings,1800,BookingID,5231,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+396,1,stg_room_bookings,1846,BookingID,6833,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+397,1,stg_room_bookings,1860,BookingID,5046,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+398,1,stg_room_bookings,1877,BookingID,5638,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+399,1,stg_room_bookings,1889,BookingID,5834,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+400,1,stg_room_bookings,1919,BookingID,6100,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+401,1,stg_room_bookings,1987,BookingID,6801,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+402,1,stg_room_bookings,1998,BookingID,5738,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+403,1,stg_room_bookings,2006,BookingID,5691,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+404,1,stg_room_bookings,2007,BookingID,7159,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+405,1,stg_room_bookings,2009,BookingID,5243,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+406,1,stg_room_bookings,2021,BookingID,7291,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+407,1,stg_room_bookings,2077,BookingID,6684,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+408,1,stg_room_bookings,2108,BookingID,6815,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+409,1,stg_room_bookings,2110,BookingID,6263,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+410,1,stg_room_bookings,2124,BookingID,6578,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+411,1,stg_room_bookings,2125,BookingID,5164,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+412,1,stg_room_bookings,2127,BookingID,6784,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+413,1,stg_room_bookings,2130,BookingID,7465,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+414,1,stg_room_bookings,2133,BookingID,5829,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+415,1,stg_room_bookings,2151,BookingID,5636,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+416,1,stg_room_bookings,2156,BookingID,6027,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+417,1,stg_room_bookings,2159,BookingID,6527,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+418,1,stg_room_bookings,2168,BookingID,7689,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+419,1,stg_room_bookings,2169,BookingID,5936,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+420,1,stg_room_bookings,2178,BookingID,7678,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+421,1,stg_room_bookings,2182,BookingID,7313,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+422,1,stg_room_bookings,2186,BookingID,6427,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+423,1,stg_room_bookings,2188,BookingID,7310,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+424,1,stg_room_bookings,2192,BookingID,6202,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+425,1,stg_room_bookings,2202,BookingID,5039,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+426,1,stg_room_bookings,2214,BookingID,6904,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+427,1,stg_room_bookings,2232,BookingID,6859,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+428,1,stg_room_bookings,2270,BookingID,6999,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+429,1,stg_room_bookings,2275,BookingID,6878,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+430,1,stg_room_bookings,2321,BookingID,6226,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+431,1,stg_room_bookings,2344,BookingID,6705,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+432,1,stg_room_bookings,2392,BookingID,6495,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+433,1,stg_room_bookings,2428,BookingID,7305,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+434,1,stg_room_bookings,2439,BookingID,7154,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+435,1,stg_room_bookings,2455,BookingID,7717,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+436,1,stg_room_bookings,2488,BookingID,5756,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+437,1,stg_room_bookings,2490,BookingID,6461,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+438,1,stg_room_bookings,2497,BookingID,6510,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+439,1,stg_room_bookings,2533,BookingID,7521,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+440,1,stg_room_bookings,2551,BookingID,5137,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+441,1,stg_room_bookings,2568,BookingID,5161,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+442,1,stg_room_bookings,2596,BookingID,5857,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+443,1,stg_room_bookings,2609,BookingID,7179,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+444,1,stg_room_bookings,2614,BookingID,7353,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+445,1,stg_room_bookings,2616,BookingID,5797,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+446,1,stg_room_bookings,2619,BookingID,6930,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+447,1,stg_room_bookings,2636,BookingID,5884,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+448,1,stg_room_bookings,2647,BookingID,6652,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+449,1,stg_room_bookings,2684,BookingID,7808,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+450,1,stg_room_bookings,2686,BookingID,5234,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+451,1,stg_room_bookings,2707,BookingID,5212,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+452,1,stg_room_bookings,2719,BookingID,6079,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+453,1,stg_room_bookings,2724,BookingID,5077,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+454,1,stg_room_bookings,2736,BookingID,7753,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+455,1,stg_room_bookings,2788,BookingID,7743,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+456,1,stg_room_bookings,2791,BookingID,7261,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+457,1,stg_room_bookings,2792,BookingID,6854,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+458,1,stg_room_bookings,2807,BookingID,6864,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+459,1,stg_room_bookings,2819,BookingID,6589,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+460,1,stg_room_bookings,2829,BookingID,5036,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+461,1,stg_room_bookings,2837,BookingID,6189,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+462,1,stg_room_bookings,2838,BookingID,5930,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+463,1,stg_room_bookings,2878,BookingID,5079,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+464,1,stg_room_bookings,2901,BookingID,7623,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+465,1,stg_room_bookings,2918,BookingID,7584,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+466,1,stg_room_bookings,2919,BookingID,6939,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+467,1,stg_room_bookings,2941,BookingID,6257,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+468,1,stg_room_bookings,2952,BookingID,7653,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+469,1,stg_room_bookings,2969,BookingID,7506,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+470,1,stg_room_bookings,2970,BookingID,5130,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+471,1,stg_room_bookings,2972,BookingID,5081,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+472,1,stg_room_bookings,2977,BookingID,6050,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+473,1,stg_room_bookings,2982,BookingID,6073,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+474,1,stg_room_bookings,2990,BookingID,5580,DUPLICATE_EXACT,REJECTED,Identical row already exists (copied twice by the source system)
+475,1,stg_room_bookings,746,StudentID,STU-2024-999,UNKNOWN_REFERENCE,DEFAULTED,Student not in master data -> Unknown student
+476,1,stg_room_bookings,1546,DurationHours,abc,INVALID_NUMBER,REJECTED,DurationHours must be a number between 0 and 12
+477,1,stg_room_bookings,1602,BookingDate,31-Feb-2024,INVALID_DATE,REJECTED,Booking date is not a valid date in 2023-2025
+478,1,stg_room_bookings,1652,StudentID,STU-2024-999,UNKNOWN_REFERENCE,DEFAULTED,Student not in master data -> Unknown student
+479,1,stg_room_bookings,2205,BookingDate,31-Feb-2024,INVALID_DATE,REJECTED,Booking date is not a valid date in 2023-2025
+480,1,stg_room_bookings,2211,BookingDate,2024-13-01,INVALID_DATE,REJECTED,Booking date is not a valid date in 2023-2025
+481,1,stg_room_bookings,2399,StudentID,STU-2024-999,UNKNOWN_REFERENCE,DEFAULTED,Student not in master data -> Unknown student
+482,1,stg_room_bookings,2491,DurationHours,,INVALID_NUMBER,REJECTED,DurationHours must be a number between 0 and 12
+483,1,stg_room_bookings,2555,DurationHours,15,INVALID_NUMBER,REJECTED,DurationHours must be a number between 0 and 12
+484,1,stg_room_bookings,2925,DurationHours,,INVALID_NUMBER,REJECTED,DurationHours must be a number between 0 and 12
+485,1,stg_room_bookings,2845,BookingID,7843,DUPLICATE_NEAR,REJECTED,"Same room R102, date and time slot as an earlier booking"
+486,1,stg_room_bookings,2264,BookingID,7844,DUPLICATE_NEAR,REJECTED,"Same room R203, date and time slot as an earlier booking"
+487,1,stg_room_bookings,355,BookingID,7845,DUPLICATE_NEAR,REJECTED,"Same room R301, date and time slot as an earlier booking"
+488,1,stg_room_bookings,1030,BookingID,7846,DUPLICATE_NEAR,REJECTED,"Same room R102, date and time slot as an earlier booking"
+489,1,stg_room_bookings,283,BookingID,7847,DUPLICATE_NEAR,REJECTED,"Same room R102, date and time slot as an earlier booking"
+490,1,stg_room_bookings,2789,BookingID,7848,DUPLICATE_NEAR,REJECTED,"Same room R201, date and time slot as an earlier booking"
+491,1,stg_room_bookings,2310,BookingID,7849,DUPLICATE_NEAR,REJECTED,"Same room R102, date and time slot as an earlier booking"
+492,1,stg_room_bookings,1565,BookingID,7850,DUPLICATE_NEAR,REJECTED,"Same room R102, date and time slot as an earlier booking"
+493,1,stg_room_bookings,1844,BookingID,7851,DUPLICATE_NEAR,REJECTED,"Same room R102, date and time slot as an earlier booking"
+494,1,stg_room_bookings,1476,BookingID,7852,DUPLICATE_NEAR,REJECTED,"Same room R301, date and time slot as an earlier booking"
+495,1,stg_room_bookings,1962,BookingID,7853,DUPLICATE_NEAR,REJECTED,"Same room R101, date and time slot as an earlier booking"
+496,1,stg_room_bookings,1556,BookingID,7855,DUPLICATE_NEAR,REJECTED,"Same room R303, date and time slot as an earlier booking"
+497,1,stg_room_bookings,2649,BookingID,7856,DUPLICATE_NEAR,REJECTED,"Same room R202, date and time slot as an earlier booking"
+498,1,stg_room_bookings,1077,BookingID,7857,DUPLICATE_NEAR,REJECTED,"Same room R301, date and time slot as an earlier booking"
+499,1,stg_room_bookings,2857,BookingID,7858,DUPLICATE_NEAR,REJECTED,"Same room R201, date and time slot as an earlier booking"
+500,1,stg_room_bookings,1310,BookingID,7859,DUPLICATE_NEAR,REJECTED,"Same room R301, date and time slot as an earlier booking"
+501,1,stg_room_bookings,322,BookingID,7860,DUPLICATE_NEAR,REJECTED,"Same room R101, date and time slot as an earlier booking"
+502,1,stg_room_bookings,1115,BookingID,7861,DUPLICATE_NEAR,REJECTED,"Same room R104, date and time slot as an earlier booking"
+503,1,stg_room_bookings,2999,BookingID,7862,DUPLICATE_NEAR,REJECTED,"Same room R104, date and time slot as an earlier booking"
+504,1,stg_room_bookings,2294,BookingID,7863,DUPLICATE_NEAR,REJECTED,"Same room R301, date and time slot as an earlier booking"
+505,1,stg_room_bookings,1041,BookingID,7864,DUPLICATE_NEAR,REJECTED,"Same room R103, date and time slot as an earlier booking"
+506,1,stg_room_bookings,341,BookingID,7865,DUPLICATE_NEAR,REJECTED,"Same room R101, date and time slot as an earlier booking"
+507,1,stg_room_bookings,1954,BookingID,7866,DUPLICATE_NEAR,REJECTED,"Same room R201, date and time slot as an earlier booking"
+508,1,stg_room_bookings,990,BookingID,7867,DUPLICATE_NEAR,REJECTED,"Same room R302, date and time slot as an earlier booking"
+509,1,stg_room_bookings,372,BookingID,7868,DUPLICATE_NEAR,REJECTED,"Same room R204, date and time slot as an earlier booking"
+510,1,stg_room_bookings,2296,BookingID,7869,DUPLICATE_NEAR,REJECTED,"Same room R301, date and time slot as an earlier booking"
+511,1,stg_room_bookings,1702,BookingID,7870,DUPLICATE_NEAR,REJECTED,"Same room R101, date and time slot as an earlier booking"
+512,1,stg_room_bookings,1750,BookingID,7871,DUPLICATE_NEAR,REJECTED,"Same room R203, date and time slot as an earlier booking"
+513,1,stg_room_bookings,2744,BookingID,7872,DUPLICATE_NEAR,REJECTED,"Same room R202, date and time slot as an earlier booking"
+514,1,stg_room_bookings,368,BookingID,7873,DUPLICATE_NEAR,REJECTED,"Same room R102, date and time slot as an earlier booking"
+515,1,stg_room_bookings,2695,BookingID,7874,DUPLICATE_NEAR,REJECTED,"Same room R204, date and time slot as an earlier booking"
+516,1,stg_room_bookings,320,BookingID,7875,DUPLICATE_NEAR,REJECTED,"Same room R201, date and time slot as an earlier booking"
+517,1,stg_room_bookings,1915,BookingID,7876,DUPLICATE_NEAR,REJECTED,"Same room R202, date and time slot as an earlier booking"
+518,1,stg_room_bookings,559,BookingID,7877,DUPLICATE_NEAR,REJECTED,"Same room R202, date and time slot as an earlier booking"
+519,1,stg_room_bookings,718,BookingID,7878,DUPLICATE_NEAR,REJECTED,"Same room R104, date and time slot as an earlier booking"
+520,1,stg_room_bookings,401,BookingID,7879,DUPLICATE_NEAR,REJECTED,"Same room R301, date and time slot as an earlier booking"
+521,1,stg_room_bookings,854,BookingID,7880,DUPLICATE_NEAR,REJECTED,"Same room R301, date and time slot as an earlier booking"
+522,1,stg_room_bookings,2498,BookingID,7881,DUPLICATE_NEAR,REJECTED,"Same room R303, date and time slot as an earlier booking"
+523,1,stg_room_bookings,2995,BookingID,7882,DUPLICATE_NEAR,REJECTED,"Same room R301, date and time slot as an earlier booking"
+524,1,stg_room_bookings,2854,BookingID,7883,DUPLICATE_NEAR,REJECTED,"Same room R104, date and time slot as an earlier booking"
+525,1,stg_room_bookings,2460,BookingID,7884,DUPLICATE_NEAR,REJECTED,"Same room R104, date and time slot as an earlier booking"
+526,1,stg_room_bookings,1775,BookingID,7885,DUPLICATE_NEAR,REJECTED,"Same room R301, date and time slot as an earlier booking"
+527,1,stg_room_bookings,2954,BookingID,7886,DUPLICATE_NEAR,REJECTED,"Same room R201, date and time slot as an earlier booking"

@@ -1,0 +1,13 @@
+room_key,room_number,floor_num,capacity,room_type,has_projector,has_whiteboard,is_quiet_zone
+1,UNKNOWN,0,0,Unknown,0,0,0
+2,R101,1,4,Group,0,1,0
+3,R102,1,6,Group,1,1,0
+4,R103,1,2,Individual,0,0,1
+5,R104,1,2,Individual,0,0,1
+6,R201,2,8,Group,1,1,0
+7,R202,2,4,Group,0,1,0
+8,R203,2,1,Individual,0,0,1
+9,R204,2,12,Seminar,1,1,0
+10,R301,3,6,Group,1,1,0
+11,R302,3,20,Seminar,1,1,0
+12,R303,3,1,Individual,0,0,1

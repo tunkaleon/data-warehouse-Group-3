@@ -1,0 +1,73 @@
+BookISBN,Title,Author,Publisher,PublicationYear,BookCategory
+978-5016579054,Programming Fundamentals with Python,P. Smith,Continental Books,2010,Textbook
+978-2538179335,Data Structures and Algorithms,P. Mensah,Global Learning,2021,Textbook
+978-5778817883,Data Structures and Algorithms: Advanced Readings,E. Ingabire,Continental Books,2019,Research
+978-1371162412,Database Systems Design,A. Smith,Global Learning,2011,Textbook
+978-3804682757,Computer Networks Explained,S. Ingabire,Academic Press,2017,Textbook
+978-3856955793,Computer Networks Explained: Advanced Readings,D. Banda,Continental Books,2022,Research
+978-9242437546,Operating Systems Principles,J. Smith,Global Learning,2017,Textbook
+978-2842222314,Operating Systems Principles: Advanced Readings,J. Mensah,Continental Books,2012,Research
+978-5238055251,Introduction to Machine Learning,T. Kamau,Kigali University Press,2017,Textbook
+978-7275208850,Introduction to Machine Learning: Advanced Readings,E. Ingabire,Global Learning,2012,Research
+978-7517028147,Software Engineering in Practice,J. Brown,Continental Books,2015,Textbook
+978-0939834303,Software Engineering in Practice: Advanced Readings,A. Kamau,Lakeside Publishing,2010,Research
+978-6375998050,Data Mining and Warehousing,S. Smith,Lakeside Publishing,2019,Textbook
+978-5547813764,Data Mining and Warehousing: Advanced Readings,T. Habimana,Kigali University Press,2021,Research
+978-6299123477,Engineering Mathematics,D. Mensah,Academic Press,2020,Textbook
+978-4628792325,Fluid Mechanics Basics,S. Habimana,Continental Books,2023,Textbook
+978-9478730022,Electrical Circuit Analysis,E. Habimana,Lakeside Publishing,2011,Textbook
+978-6273014715,Strength of Materials,R. Mutesi,Global Learning,2023,Textbook
+978-7158904299,Thermodynamics for Engineers,J. Smith,Global Learning,2022,Textbook
+978-2045650440,Thermodynamics for Engineers: Advanced Readings,D. Garcia,Academic Press,2014,Research
+978-2192855446,Civil Engineering Drawing,P. Uwase,Continental Books,2019,Textbook
+978-8457652133,Civil Engineering Drawing: Advanced Readings,M. Kamau,Kigali University Press,2014,Research
+978-8988816714,Principles of Accounting,A. Banda,Kigali University Press,2008,Textbook
+978-5279852406,Principles of Accounting: Advanced Readings,A. Okoro,Kigali University Press,2012,Research
+978-4232161104,Introduction to Microeconomics,T. Wilson,Lakeside Publishing,2009,Textbook
+978-8907140142,Introduction to Microeconomics: Advanced Readings,J. Wilson,Academic Press,2011,Research
+978-3932501241,Marketing Management,R. Mensah,Global Learning,2013,Textbook
+978-9389119084,Business Statistics,K. Mutesi,Kigali University Press,2017,Textbook
+978-0138759278,Entrepreneurship in Africa,A. Smith,Global Learning,2020,Textbook
+978-6151718278,Financial Management,P. Mutesi,Global Learning,2009,Textbook
+978-6479473866,Human Anatomy Atlas,E. Banda,Lakeside Publishing,2014,Textbook
+978-7520716789,Clinical Pharmacology,A. Uwase,Kigali University Press,2020,Textbook
+978-1215353969,Principles of Public Health,A. Okoro,Lakeside Publishing,2023,Textbook
+978-9946579672,Medical Physiology,D. Habimana,Kigali University Press,2022,Textbook
+978-7320101709,Medical Physiology: Advanced Readings,M. Brown,Continental Books,2018,Research
+978-9911877345,Community Nursing Care,T. Ingabire,Continental Books,2016,Textbook
+978-8800616751,Educational Psychology,S. Ingabire,Lakeside Publishing,2009,Textbook
+978-4276246713,Curriculum Development,R. Garcia,Lakeside Publishing,2023,Textbook
+978-8064796954,Classroom Assessment Methods,E. Mensah,Academic Press,2008,Textbook
+978-5590561650,Classroom Assessment Methods: Advanced Readings,P. Brown,Global Learning,2009,Research
+978-3349114157,Inclusive Education,M. Mugisha,Continental Books,2018,Textbook
+978-6986407903,Constitutional Law,P. Brown,Continental Books,2020,Textbook
+978-7135785293,Constitutional Law: Advanced Readings,E. Mensah,Lakeside Publishing,2014,Research
+978-1834404967,Law of Contract,K. Niyonzima,Academic Press,2011,Textbook
+978-9876351485,Law of Contract: Advanced Readings,E. Brown,Continental Books,2018,Research
+978-6498782086,Criminal Procedure,M. Niyonzima,Lakeside Publishing,2014,Textbook
+978-7489690830,International Human Rights Law,P. Ingabire,Kigali University Press,2015,Textbook
+978-4665136441,World History Survey,M. Habimana,Continental Books,2015,Textbook
+978-3034778664,World History Survey: Advanced Readings,J. Okoro,Kigali University Press,2016,Research
+978-4482070010,Introduction to Linguistics,P. Niyonzima,Global Learning,2010,Textbook
+978-5162319818,African Literature Anthology,D. Garcia,Continental Books,2016,Textbook
+978-9155963637,African Literature Anthology: Advanced Readings,M. Uwase,Kigali University Press,2014,Research
+978-7649078515,Philosophy and Ethics,P. Kamau,Lakeside Publishing,2023,Textbook
+978-2575409006,General Chemistry,K. Habimana,Continental Books,2020,Textbook
+978-5183760644,University Physics,E. Uwase,Kigali University Press,2017,Textbook
+978-7560417769,Cell Biology,P. Mutesi,Lakeside Publishing,2011,Textbook
+978-8156985709,Calculus I,J. Garcia,Kigali University Press,2022,Textbook
+978-6345911232,Calculus I: Advanced Readings,D. Mutesi,Kigali University Press,2021,Research
+978-5772429549,Statistics for Science,K. Uwase,Lakeside Publishing,2019,Textbook
+978-9300893178,The River Between Hills,K. Habimana,Kigali University Press,2009,Fiction
+978-6942152915,Morning in Kigali,J. Mutesi,Continental Books,2021,Fiction
+978-7713334479,The Last Lantern,S. Smith,Lakeside Publishing,2014,Fiction
+978-4362620441,Songs of the Rain,K. Niyonzima,Lakeside Publishing,2015,Fiction
+978-7107256363,A Bridge of Stones,S. Mutesi,Continental Books,2016,Fiction
+978-8005375996,The Silent Market,J. Mugisha,Global Learning,2020,Fiction
+978-6528092420,Echoes of Lake Kivu,D. Ingabire,Global Learning,2022,Fiction
+978-5862415025,The Teacher's Daughter,T. Banda,Global Learning,2019,Fiction
+978-4494856251,Oxford Style Dictionary,T. Wilson,Kigali University Press,2022,Reference
+978-2032074273,Academic Writing Handbook,S. Uwase,Lakeside Publishing,2009,Reference
+978-8777121517,Research Methods Guide,K. Banda,Global Learning,2013,Reference
+978-8499390895,World Atlas 2022,M. Brown,Academic Press,2015,Reference
+978-1504165914,Encyclopedia of Science,P. Smith,Academic Press,2010,Reference

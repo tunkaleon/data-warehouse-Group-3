@@ -1,0 +1,31 @@
+<!doctype html>
+<!-- login.html: username + password. The check is done by secure_access.login() -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign in - Library Analytics</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="login-wrap">
+    <form class="login" method="post" autocomplete="off">
+      <h1>University Library Analytics</h1>
+      <p>Sign in to see the dashboard for your role.</p>
+      {% if error %}<div class="error">{{ error }}</div>{% endif %}
+      <label for="username">Username</label>
+      <input id="username" name="username" required autofocus>
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" required>
+      <button type="submit">Sign in</button>
+      <table>
+        <tr><th>User</th><th>Dashboard</th></tr>
+        <tr><td>director</td><td>Executive (whole library)</td></tr>
+        <tr><td>head_cs / head_eng / head_bus</td><td>Department (own unit only)</td></tr>
+        <tr><td>ops_manager</td><td>Operational (daily operations)</td></tr>
+      </table>
+      <div class="notice">3 wrong passwords lock the account for 24 hours. Every sign-in is written to the audit log.</div>
+    </form>
+  </div>
+</body>
+</html>

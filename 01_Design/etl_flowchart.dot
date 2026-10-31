@@ -1,0 +1,29 @@
+digraph F {
+ graph [rankdir=TB, fontname="Helvetica", label="ETL process flowchart (etl_script.py - one batch)", labelloc=t, fontsize=18, nodesep=0.3, ranksep=0.32, pad=0.3];
+ node [shape=box, style="rounded,filled", fillcolor="#ffffff", fontname="Helvetica", fontsize=11, color="#7a7a7a", width=3.2];
+ edge [color="#444444"];
+ start [label="START (nightly 00:30 or manual)", shape=oval, fillcolor="#e8f4ea"];
+ db [label="Open library_dw.db\n(build it with scripts 01-07 if missing)"];
+ rules [label="Read cleansing rules from map_* tables\ncheck dimension keys"];
+ ex [label="EXTRACT 5 files -> DataFrames, every value as TEXT\n(+ source file, sheet, line number)", fillcolor="#eef3f8"];
+ t1 [label="Remove EXACT duplicates", fillcolor="#fdf3e3"];
+ t2 [label="Parse dates (per-source / per-sheet formats) -> ISO 8601\nreject impossible dates and return < checkout", fillcolor="#fdf3e3"];
+ t3 [label="Standardise: departments, rooms, time slots,\nresource & user types, ISBN, purpose", fillcolor="#fdf3e3"];
+ t4 [label="Missing values: department from student master,\nwalk-in -> Unknown student, duration -> NULL + flag", fillcolor="#fdf3e3"];
+ t5 [label="Text -> numbers ('2 hrs', ' 7 ', '1,203'); range checks;\nremove subtotal rows", fillcolor="#fdf3e3"];
+ t6 [label="Remove LOGICAL / NEAR duplicates\n(same student+book+day; same room+day+slot)", fillcolor="#fdf3e3"];
+ errlog [label="every problem ->\nerror log", shape=note, fillcolor="#fbe0dc", width=1.6];
+ bld [label="BUILD dimensions + facts with surrogate keys"];
+ val [label="VALIDATE: 12 checks pass?", shape=diamond, fillcolor="#fff8c6", width=2.6];
+ fail [label="STOP - nothing loaded\nwrite output/etl_failure.log", fillcolor="#fbe0dc"];
+ sql [label="Write sample_data.sql"];
+ load [label="LOAD in ONE transaction\n(batch RUNNING -> SUCCESS)", fillcolor="#e8f4ea"];
+ ok [label="Post-load checks OK?", shape=diamond, fillcolor="#fff8c6", width=2.6];
+ rb [label="ROLLBACK - batch FAILED", fillcolor="#fbe0dc"];
+ out [label="Export Power BI CSVs, error log,\nquality metrics; differential backup"];
+ end [label="END", shape=oval, fillcolor="#e8f4ea"];
+ start->db->rules->ex->t1->t2->t3->t4->t5->t6->bld->val;
+ {t2 t3 t4 t5 t6} -> errlog [style=dashed, color="#c0504d", arrowsize=0.6];
+ val->fail [label=" no", fontsize=10]; val->sql [label=" yes", fontsize=10]; sql->load->ok; ok->rb [label=" no", fontsize=10]; ok->out [label=" yes", fontsize=10]; out->end;
+ {rank=same; t4; errlog}
+}

@@ -1,0 +1,155 @@
+{
+  "batch": {
+    "started_at": "2026-10-27 18:46:36",
+    "finished_at": "2026-10-27 18:46:46",
+    "rows_extracted": 9390,
+    "rows_loaded": 9065,
+    "rows_rejected": 325
+  },
+  "validation": [
+    {
+      "check": "No duplicate TransactionID in fact_book_loan",
+      "result": "PASS"
+    },
+    {
+      "check": "No duplicate BookingID in fact_room_booking",
+      "result": "PASS"
+    },
+    {
+      "check": "No room double-booked in the same slot",
+      "result": "PASS"
+    },
+    {
+      "check": "All checkout dates inside 2023-2025",
+      "result": "PASS"
+    },
+    {
+      "check": "All download dates inside 2023-2025",
+      "result": "PASS"
+    },
+    {
+      "check": "All booking dates inside 2023-2025",
+      "result": "PASS"
+    },
+    {
+      "check": "Loan durations are never negative",
+      "result": "PASS"
+    },
+    {
+      "check": "Download counts are never negative",
+      "result": "PASS"
+    },
+    {
+      "check": "Booking hours between 0 and 12",
+      "result": "PASS"
+    },
+    {
+      "check": "Every student_key exists in dim_student",
+      "result": "PASS"
+    },
+    {
+      "check": "Every book_key exists in dim_book",
+      "result": "PASS"
+    },
+    {
+      "check": "No NULL department_key in any fact",
+      "result": "PASS"
+    }
+  ],
+  "sources": {
+    "book_transactions": {
+      "rows_before": 2278,
+      "rows_after": 2205,
+      "exact_duplicates": 44,
+      "logical_duplicates": 22,
+      "department_spellings": [
+        32,
+        8
+      ],
+      "date_formats": [
+        4,
+        1
+      ],
+      "isbn_formats": [
+        2,
+        1
+      ],
+      "category_spellings": [
+        12,
+        4
+      ],
+      "missing_department": [
+        79,
+        0
+      ],
+      "missing_return_date": [
+        331,
+        319
+      ]
+    },
+    "digital_usage": {
+      "rows_before": 4113,
+      "rows_after": 4023,
+      "exact_duplicates": 60,
+      "faculty_spellings": [
+        32,
+        9
+      ],
+      "date_formats": [
+        3,
+        1
+      ],
+      "resource_type_spellings": [
+        10,
+        3
+      ],
+      "user_type_spellings": [
+        13,
+        4
+      ],
+      "download_count_as_text": [
+        77,
+        0
+      ],
+      "missing_duration": [
+        968,
+        937
+      ],
+      "missing_faculty": [
+        91,
+        0
+      ]
+    },
+    "room_bookings": {
+      "rows_before": 2999,
+      "rows_after": 2837,
+      "exact_duplicates": 112,
+      "near_duplicates": 43,
+      "room_spellings": [
+        55,
+        11
+      ],
+      "time_slot_spellings": [
+        21,
+        6
+      ],
+      "date_formats": [
+        2,
+        1
+      ],
+      "duration_as_text": [
+        1473,
+        0
+      ],
+      "purpose_spellings": [
+        10,
+        6
+      ],
+      "missing_student_id": [
+        214,
+        0
+      ],
+      "walk_ins_mapped_to_unknown": 207
+    }
+  }
+}
