@@ -1,4 +1,4 @@
-# University Library Analytics - Data Warehouse (FA1 Group Project)
+# University Library Analytics - Data Warehouse
 
 HAIP · Data Mining and Data Warehousing · Group **X** (rename the folder and the zip to your group number, e.g. `Group03_LibraryDW`)
 
